@@ -2,34 +2,43 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="googlebot" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ruedas Family · Canadian Rockies 2026</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --pine:#1f3d34; --pine-deep:#152a24; --sage:#7a9b8e; --moss:#dfe8e2;
-    --glacier:#3f7d8c; --glacier-light:#cfe3e7; --turq:#3aa6b0;
-    --sand:#f4efe6; --paper:#fbf8f2; --ink:#23211c; --muted:#6f6a60;
-    --gold:#c9a24b; --rust:#b4623a; --line:#e2dccf;
+    --pine:#1f3d34;--pine-deep:#152a24;--sage:#7a9b8e;--moss:#dfe8e2;
+    --glacier:#3f7d8c;--glacier-light:#cfe3e7;--turq:#3aa6b0;
+    --sand:#f4efe6;--paper:#fbf8f2;--ink:#23211c;--muted:#6f6a60;
+    --gold:#c9a24b;--rust:#b4623a;--line:#e2dccf;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{font-family:'Outfit',sans-serif;background:var(--paper);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;}
   .wrap{max-width:1080px;margin:0 auto;padding:0 22px;}
 
-  .hero{position:relative;background:linear-gradient(160deg,var(--pine-deep) 0%,var(--pine) 45%,var(--glacier) 120%);color:var(--paper);padding:64px 0 120px;overflow:hidden;}
-  .hero::before{content:"";position:absolute;inset:0;opacity:.10;background-image:radial-gradient(circle at 20% 30%, #fff 0 1px, transparent 1px),radial-gradient(circle at 70% 60%, #fff 0 1px, transparent 1px);background-size:90px 90px,140px 140px;}
+  .hero{position:relative;background:linear-gradient(160deg,var(--pine-deep) 0%,var(--pine) 45%,var(--glacier) 120%);color:var(--paper);padding:60px 0 120px;overflow:hidden;}
+  .hero::before{content:"";position:absolute;inset:0;opacity:.10;background-image:radial-gradient(circle at 20% 30%,#fff 0 1px,transparent 1px),radial-gradient(circle at 70% 60%,#fff 0 1px,transparent 1px);background-size:90px 90px,140px 140px;}
   .ranges{position:absolute;left:0;right:0;bottom:-1px;height:130px;width:100%;}
   .hero-inner{position:relative;z-index:2;}
   .eyebrow{font-size:.78rem;letter-spacing:.34em;text-transform:uppercase;color:var(--glacier-light);font-weight:600;}
-  .hero h1{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(2.7rem,7vw,5rem);line-height:1.02;margin:14px 0 8px;letter-spacing:-.02em;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:900;font-size:clamp(2.5rem,7vw,4.8rem);line-height:1.02;margin:12px 0 8px;letter-spacing:-.02em;}
   .hero h1 em{font-style:italic;color:var(--gold);}
-  .hero .sub{font-size:clamp(1rem,2.5vw,1.3rem);color:#e9efe9;font-weight:300;max-width:640px;}
-  .hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;}
-  .chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);padding:7px 15px;border-radius:30px;font-size:.85rem;font-weight:500;backdrop-filter:blur(4px);}
+  .hero .sub{font-size:clamp(1rem,2.4vw,1.28rem);color:#e9efe9;font-weight:300;max-width:640px;}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px;}
+  .chip{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);padding:7px 15px;border-radius:30px;font-size:.85rem;font-weight:500;}
   .chip b{color:var(--gold);font-weight:700;}
+
+  .countdown{position:relative;z-index:2;margin-top:26px;display:inline-flex;align-items:center;gap:16px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);border-radius:18px;padding:16px 22px;}
+  .cd-label{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--glacier-light);font-weight:600;}
+  .cd-units{display:flex;gap:14px;}
+  .cd-u{text-align:center;min-width:48px;}
+  .cd-u .v{font-family:'Fraunces',serif;font-weight:600;font-size:2rem;line-height:1;color:#fff;}
+  .cd-u .k{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:#cdd9d2;margin-top:4px;}
+  .cd-sep{font-family:'Fraunces',serif;font-size:1.6rem;color:var(--gold);align-self:flex-start;margin-top:2px;}
+  .cd-done{font-family:'Fraunces',serif;font-size:1.3rem;color:var(--gold);}
 
   .stats{position:relative;z-index:5;margin-top:-72px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
   .stat{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:20px 18px;box-shadow:0 16px 40px -22px rgba(21,42,36,.5);}
@@ -37,68 +46,133 @@
   .stat .l{font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:7px;font-weight:600;}
   .stat .s{font-size:.8rem;color:var(--sage);margin-top:3px;}
 
-  section{padding:54px 0 8px;}
-  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:26px;}
-  .sec-head h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.9rem;color:var(--pine);letter-spacing:-.01em;}
+  section{padding:50px 0 8px;}
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:24px;}
+  .sec-head h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.9rem;color:var(--pine);}
   .sec-head .num{font-family:'Fraunces',serif;font-size:1rem;color:var(--gold);font-weight:600;}
   .sec-head .rule{flex:1;height:1px;background:var(--line);}
 
-  .route{display:flex;flex-wrap:nowrap;gap:0;align-items:stretch;background:var(--sand);border-radius:18px;padding:10px;border:1px solid var(--line);}
+  /* ROUTE (responsive timeline) */
+  .route{display:flex;flex-wrap:nowrap;background:var(--sand);border-radius:18px;padding:10px;border:1px solid var(--line);}
   .leg{flex:1;min-width:0;padding:16px 12px;border-radius:12px;position:relative;text-align:center;}
   .leg .ic{font-size:1.1rem;line-height:1;margin-bottom:6px;display:block;}
-  .leg:not(:last-child)::after{content:"";position:absolute;right:-1px;top:50%;transform:translateY(-50%);width:18px;height:2px;background:var(--sage);opacity:.5;z-index:2;}
+  .leg:not(:last-child)::after{content:"";position:absolute;right:-1px;top:50%;transform:translateY(-50%);width:18px;height:2px;background:var(--sage);opacity:.5;}
   .leg .b{font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;}
   .leg .p{font-family:'Fraunces',serif;font-size:1.05rem;color:var(--pine);font-weight:600;margin:3px 0;line-height:1.1;}
   .leg .d{font-size:.78rem;color:var(--sage);}
-  /* mobile: vertical connected timeline */
-  @media(max-width:760px){
-    .route{flex-direction:column;gap:0;padding:8px 8px 8px 6px;}
-    .leg{display:grid;grid-template-columns:34px 1fr;text-align:left;align-items:center;padding:12px 10px;gap:10px;}
-    .leg .ic{margin:0;grid-row:1/3;grid-column:1;justify-self:center;width:30px;height:30px;display:flex;align-items:center;justify-content:center;background:var(--paper);border:2px solid var(--glacier);border-radius:50%;font-size:.95rem;z-index:2;position:relative;}
-    .leg .b{grid-column:2;}
-    .leg .p{grid-column:2;font-size:1.1rem;margin:1px 0;}
-    .leg .d{grid-column:2;}
-    /* vertical connecting spine through the icon centers */
-    .leg:not(:last-child)::after{content:"";position:absolute;left:21px;top:50%;bottom:-50%;width:2px;height:auto;background:var(--glacier);opacity:.35;transform:none;}
-  }
 
-  .day{display:grid;grid-template-columns:108px 1fr;border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-bottom:14px;background:var(--paper);box-shadow:0 6px 22px -18px rgba(21,42,36,.4);transition:transform .18s ease,box-shadow .18s ease;}
-  .day:hover{transform:translateY(-2px);box-shadow:0 16px 34px -20px rgba(21,42,36,.45);}
-  .day .date{background:linear-gradient(160deg,var(--pine) 0%,var(--pine-deep) 100%);color:var(--paper);padding:18px 14px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;}
-  .day .date .dn{font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--glacier-light);font-weight:600;}
-  .day .date .dd{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:600;line-height:1.05;margin-top:4px;}
-  .day .date .dm{font-size:.78rem;color:#cdd9d2;}
-  .day .body{padding:16px 20px;}
-  .day .base{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--glacier);font-weight:700;margin-bottom:8px;display:flex;align-items:center;gap:7px;flex-wrap:wrap;}
-  .day .base .pin{width:7px;height:7px;border-radius:50%;background:var(--glacier);}
-  .locked{margin:0 0 9px;padding-left:15px;position:relative;font-weight:500;color:var(--ink);}
-  .locked::before{content:"●";position:absolute;left:0;color:var(--glacier);font-size:.7rem;top:4px;}
-  .flex{margin:0 0 3px;padding-left:15px;position:relative;color:var(--muted);font-size:.92rem;}
-  .flex::before{content:"○";position:absolute;left:0;color:var(--gold);font-size:.7rem;top:4px;}
-  .tag{display:inline-block;font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;padding:2px 8px;border-radius:20px;margin-left:6px;}
-  .tag.big{background:#f6e6c9;color:var(--rust);}
-  .tag.bday{background:#f7d9e4;color:#b03a6a;}
-  .legend{display:flex;gap:22px;flex-wrap:wrap;margin-bottom:20px;font-size:.85rem;color:var(--muted);}
+  /* DAY CARD GRID — flip cards */
+  .legend{display:flex;gap:22px;flex-wrap:wrap;margin-bottom:22px;font-size:.85rem;color:var(--muted);}
   .legend span{display:flex;align-items:center;gap:7px;}
   .dotb{width:9px;height:9px;border-radius:50%;background:var(--glacier);}
   .dotp{width:9px;height:9px;border-radius:50%;border:2px solid var(--gold);}
+  .daygrid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+  .daycard{
+    position:relative;text-align:left;cursor:pointer;font-family:inherit;color:inherit;
+    border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--paper);
+    display:grid;grid-template-columns:84px 1fr;min-height:150px;
+    box-shadow:0 6px 22px -18px rgba(21,42,36,.4);
+    transition:transform .22s cubic-bezier(.34,1.56,.64,1),box-shadow .22s ease;
+  }
+  .daycard:hover{transform:translateY(-4px) scale(1.015);box-shadow:0 22px 44px -20px rgba(21,42,36,.5);}
+  .daycard:active{transform:translateY(-1px) scale(.99);}
+  .dc-date{background:linear-gradient(160deg,var(--pine),var(--pine-deep));color:var(--paper);padding:16px 8px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
+  .dc-dn{font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--glacier-light);font-weight:600;}
+  .dc-dd{font-family:'Fraunces',serif;font-size:1.7rem;font-weight:600;line-height:1;margin:3px 0;}
+  .dc-dm{font-size:.72rem;color:#cdd9d2;}
+  .dc-body{padding:14px 16px;display:flex;flex-direction:column;}
+  .dc-base{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--glacier);font-weight:700;margin-bottom:7px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
+  .dc-pin{width:7px;height:7px;border-radius:50%;background:var(--glacier);}
+  .dc-front{font-weight:600;color:var(--ink);font-size:1rem;line-height:1.3;margin-bottom:8px;}
+  .dc-wear{display:inline-flex;align-items:flex-start;gap:5px;background:var(--glacier-light);color:#1f4e5f;border-radius:12px;padding:5px 10px;font-size:.74rem;font-weight:600;margin-top:auto;}
+  .dc-wear .e{font-size:.85rem;}
+  .dc-tap{font-size:.72rem;color:var(--sage);font-weight:600;margin-top:9px;letter-spacing:.02em;}
+  .lockicon{margin-left:auto;font-size:.78rem;opacity:.7;}
+  .tag{display:inline-block;font-size:.6rem;letter-spacing:.06em;text-transform:uppercase;font-weight:700;padding:2px 7px;border-radius:12px;}
+  .tag.big{background:#f6e6c9;color:var(--rust);}
+  .tag.bday{background:#f7d9e4;color:#b03a6a;}
 
-  /* included perks */
-  .perks{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
-  .perk{border:1px solid var(--line);border-radius:14px;padding:20px;background:var(--paper);position:relative;}
-  .perk .ic{font-size:1.6rem;}
-  .perk .t{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600;color:var(--pine);margin:8px 0 4px;}
-  .perk .d{font-size:.9rem;color:var(--muted);}
+  /* FULL-SCREEN DETAIL OVERLAY with flip+grow */
+  #overlay{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:18px;
+    background:rgba(21,42,36,.55);backdrop-filter:blur(6px);opacity:0;transition:opacity .25s ease;}
+  #overlay.show{display:flex;opacity:1;}
+  .detail{
+    position:relative;width:100%;max-width:680px;max-height:92vh;overflow-y:auto;
+    background:var(--paper);border-radius:24px;
+    box-shadow:0 40px 90px -30px rgba(0,0,0,.6);
+    transform:perspective(1400px) rotateY(90deg) scale(.85);opacity:0;
+    transform-origin:center;
+  }
+  #overlay.show .detail{animation:flipIn .55s cubic-bezier(.2,.8,.2,1) forwards;}
+  @keyframes flipIn{
+    0%{transform:perspective(1400px) rotateY(90deg) scale(.85);opacity:0;}
+    60%{opacity:1;}
+    100%{transform:perspective(1400px) rotateY(0deg) scale(1);opacity:1;}
+  }
+  .detail-hd{background:linear-gradient(160deg,var(--pine),var(--glacier));color:#fff;padding:28px 28px 24px;position:relative;overflow:hidden;}
+  .detail-hd::before{content:"";position:absolute;inset:0;opacity:.12;background-image:radial-gradient(circle at 30% 40%,#fff 0 1px,transparent 1px);background-size:60px 60px;}
+  .detail-hd .ey{font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--glacier-light);font-weight:600;position:relative;}
+  .detail-hd h3{font-family:'Fraunces',serif;font-size:1.9rem;font-weight:600;margin:6px 0 4px;position:relative;}
+  .detail-hd .base{font-size:.95rem;color:#e9efe9;position:relative;}
+  .closebtn{position:absolute;top:18px;right:18px;width:38px;height:38px;border-radius:50%;border:none;background:rgba(255,255,255,.18);color:#fff;font-size:1.3rem;cursor:pointer;z-index:3;display:flex;align-items:center;justify-content:center;transition:background .15s;}
+  .closebtn:hover{background:rgba(255,255,255,.32);}
+  .detail-bd{padding:24px 28px 30px;}
+  .dwear{display:flex;align-items:center;gap:8px;background:var(--glacier-light);color:#1f4e5f;border-radius:14px;padding:10px 14px;font-size:.9rem;font-weight:600;margin-bottom:22px;}
+  .dwear .e{font-size:1.1rem;}
+  .dgroup{margin-bottom:22px;}
+  .dgroup h4{font-family:'Fraunces',serif;font-size:1.1rem;color:var(--pine);margin-bottom:10px;display:flex;align-items:center;gap:8px;}
+  .dgroup h4 .badge{font-size:.62rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:2px 9px;border-radius:20px;}
+  .badge.done{background:#d6ecd8;color:#2f7d44;}
+  .badge.pend{background:#f6e6c9;color:#9a6a1e;}
+  .dlist{list-style:none;}
+  .dlist li{padding:8px 0 8px 26px;position:relative;border-bottom:1px dashed var(--line);font-size:.94rem;}
+  .dlist li:last-child{border-bottom:none;}
+  .dlist.done li::before{content:"✓";position:absolute;left:0;color:#2f7d44;font-weight:700;}
+  .dlist.pend li::before{content:"○";position:absolute;left:2px;color:var(--gold);font-weight:700;}
+  /* activities */
+  .acts{display:flex;flex-direction:column;gap:10px;}
+  .act{display:flex;align-items:center;justify-content:space-between;gap:12px;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:var(--sand);text-decoration:none;color:inherit;transition:border-color .15s,transform .12s;}
+  a.act:hover{border-color:var(--glacier);transform:translateX(2px);}
+  .act .ai .nm{font-weight:600;color:var(--pine);font-size:.95rem;}
+  .act .ai .nt{font-size:.8rem;color:var(--muted);margin-top:1px;}
+  .act .go{font-size:.78rem;font-weight:700;color:var(--glacier);white-space:nowrap;}
+  .act.nolink{opacity:.85;}
+  .act.nolink .go{color:var(--sage);}
+  /* reservations / encrypted */
+  .resbox{border:1.5px dashed var(--glacier);border-radius:14px;padding:18px;background:rgba(63,125,140,.06);}
+  .resbox .lockhd{display:flex;align-items:center;gap:8px;font-weight:600;color:var(--pine);margin-bottom:6px;}
+  .resbox .hint{font-size:.84rem;color:var(--muted);margin-bottom:12px;}
+  .resbox input{width:100%;padding:11px 13px;border-radius:10px;border:1.5px solid var(--line);font-size:.95rem;font-family:'Outfit';margin-bottom:10px;}
+  .resbox button{background:var(--glacier);color:#fff;border:none;border-radius:30px;padding:10px 22px;font-weight:700;font-size:.88rem;cursor:pointer;font-family:'Outfit';}
+  .resbox button:active{transform:scale(.97);}
+  .resbox .err{color:var(--rust);font-size:.84rem;margin-top:8px;display:none;}
+  .resreveal{display:none;margin-top:4px;}
+  .resreveal .ri{padding:9px 0;border-bottom:1px solid var(--line);}
+  .resreveal .ri:last-child{border-bottom:none;}
+  .resreveal .rl{font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;color:var(--sage);font-weight:700;}
+  .resreveal .rv{font-size:.96rem;color:var(--ink);font-weight:500;margin-top:1px;word-break:break-word;}
+  .reslock-again{font-size:.78rem;color:var(--glacier);font-weight:600;cursor:pointer;margin-top:12px;display:inline-block;}
 
-  /* stays */
+
+  /* restored sections */
   .stays{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
   .stay{border:1px solid var(--line);border-radius:14px;padding:18px;background:var(--paper);position:relative;overflow:hidden;}
   .stay::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--glacier);}
   .stay .t{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600;color:var(--pine);}
   .stay .w{font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--sage);font-weight:600;margin:2px 0 8px;}
   .stay .d{font-size:.9rem;color:var(--muted);}
-
-  /* packing */
+  .perks{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .perk{border:1px solid var(--line);border-radius:14px;padding:20px;background:var(--paper);}
+  .perk .ic{font-size:1.6rem;}
+  .perk .t{font-family:'Fraunces',serif;font-size:1.1rem;font-weight:600;color:var(--pine);margin:8px 0 4px;}
+  .perk .d{font-size:.9rem;color:var(--muted);}
+  .weather{background:var(--pine);color:var(--paper);border-radius:16px;padding:22px;margin-bottom:14px;}
+  .weather h3{font-family:'Fraunces',serif;font-size:1.2rem;margin-bottom:10px;color:#fff;}
+  .wgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0;}
+  .wbox{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:10px;padding:12px;text-align:center;}
+  .wbox .n{font-family:'Fraunces',serif;font-size:1.4rem;color:var(--gold);}
+  .wbox .l{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#cdd9d2;margin-top:2px;}
+  .weather p{font-size:.9rem;color:#e9efe9;line-height:1.55;}
   .packwrap{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
   .pack{border:1px solid var(--line);border-radius:16px;padding:22px;background:var(--paper);}
   .pack h3{font-family:'Fraunces',serif;font-size:1.15rem;color:var(--pine);margin-bottom:12px;display:flex;align-items:center;gap:9px;}
@@ -108,60 +182,37 @@
   .pack li:last-child{border-bottom:none;}
   .pack li::before{content:"✓";position:absolute;left:0;color:var(--glacier);font-weight:700;}
   .pack li b{color:var(--ink);font-weight:600;}
-  .weather{background:var(--pine);color:var(--paper);border-radius:16px;padding:22px;margin-bottom:14px;}
-  .weather h3{font-family:'Fraunces',serif;font-size:1.2rem;margin-bottom:10px;color:#fff;}
-  .wgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:14px 0;}
-  .wbox{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:10px;padding:12px;text-align:center;}
-  .wbox .n{font-family:'Fraunces',serif;font-size:1.4rem;color:var(--gold);}
-  .wbox .l{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:#cdd9d2;margin-top:2px;}
-  .weather p{font-size:.9rem;color:#e9efe9;line-height:1.55;}
-
-
-
-  .wear{display:inline-flex;align-items:center;gap:5px;margin-top:7px;background:var(--glacier-light);color:#1f4e5f;border-radius:20px;padding:4px 11px;font-size:.76rem;font-weight:600;}
-  .wear .e{font-size:.9rem;}
-  .wear-note{font-size:.78rem;color:var(--sage);margin-top:6px;font-style:italic;}
-
-  /* countdown */
-  .countdown{position:relative;z-index:2;margin-top:30px;display:inline-flex;align-items:center;gap:16px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);border-radius:18px;padding:16px 22px;backdrop-filter:blur(5px);}
-  .countdown .cd-label{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--glacier-light);font-weight:600;}
-  .cd-units{display:flex;gap:14px;}
-  .cd-u{text-align:center;min-width:48px;}
-  .cd-u .v{font-family:'Fraunces',serif;font-weight:600;font-size:2rem;line-height:1;color:#fff;}
-  .cd-u .k{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:#cdd9d2;margin-top:4px;}
-  .cd-sep{font-family:'Fraunces',serif;font-size:1.6rem;color:var(--gold);align-self:flex-start;margin-top:2px;}
-  .cd-done{font-family:'Fraunces',serif;font-size:1.3rem;color:var(--gold);}
-  @media(max-width:760px){.countdown{flex-direction:column;align-items:flex-start;gap:10px;padding:14px 18px;}.cd-u .v{font-size:1.6rem;}}
-
-
-  /* expiry gate */
-  #expired-screen{display:none;position:fixed;inset:0;z-index:9999;background:linear-gradient(160deg,var(--pine-deep),var(--pine) 60%,var(--glacier));color:var(--paper);flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px;}
-  #expired-screen .ic{font-size:4rem;margin-bottom:18px;}
-  #expired-screen h1{font-family:'Fraunces',serif;font-size:2.2rem;font-weight:600;margin-bottom:12px;}
-  #expired-screen p{font-size:1.05rem;color:#e9efe9;max-width:460px;line-height:1.6;}
-  #expired-screen .sub{font-size:.85rem;color:#cdd9d2;margin-top:18px;}
+  /* per-day forecast chip on cards + detail */
+  .dc-fc{display:inline-flex;align-items:center;gap:6px;margin-top:8px;font-size:.78rem;font-weight:600;color:var(--pine);background:#eef3ee;border:1px solid var(--line);border-radius:12px;padding:4px 10px;}
+  .dc-fc .fe{font-size:.95rem;}
+  .dc-fc.placeholder{color:var(--sage);font-weight:500;font-style:italic;background:transparent;border-style:dashed;}
+  .dfc{display:flex;align-items:center;gap:14px;background:linear-gradient(135deg,var(--glacier),var(--turq));color:#fff;border-radius:14px;padding:14px 18px;margin-bottom:20px;}
+  .dfc .big{font-size:1.9rem;}
+  .dfc .ti{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;opacity:.85;font-weight:700;}
+  .dfc .tv{font-family:'Fraunces',serif;font-size:1.2rem;font-weight:600;}
+  .dfc .sub{font-size:.82rem;opacity:.9;}
+  .dfc.placeholder{background:var(--sand);color:var(--muted);border:1px dashed var(--line);}
+  .dfc.placeholder .tv{color:var(--pine);}
+  @media(max-width:760px){.perks{grid-template-columns:1fr;}.stays,.packwrap{grid-template-columns:1fr;}}
 
   footer{margin-top:50px;padding:30px 0 50px;text-align:center;color:var(--muted);font-size:.82rem;border-top:1px solid var(--line);}
   footer .h{font-family:'Fraunces',serif;color:var(--pine);font-size:1rem;margin-bottom:4px;}
 
+  @media(max-width:860px){.daygrid{grid-template-columns:repeat(2,1fr);}}
   @media(max-width:760px){
     .stats{grid-template-columns:repeat(2,1fr);margin-top:-56px;}
-    .perks{grid-template-columns:1fr;}
-    .stays,.packwrap{grid-template-columns:1fr;}
-    .wgrid{grid-template-columns:repeat(3,1fr);}
-    .day{grid-template-columns:84px 1fr;}
+    .countdown{flex-direction:column;align-items:flex-start;gap:10px;}
+    .route{flex-direction:column;padding:8px 8px 8px 6px;}
+    .leg{display:grid;grid-template-columns:34px 1fr;text-align:left;align-items:center;padding:12px 10px;gap:10px;}
+    .leg .ic{margin:0;grid-row:1/3;grid-column:1;justify-self:center;width:30px;height:30px;display:flex;align-items:center;justify-content:center;background:var(--paper);border:2px solid var(--glacier);border-radius:50%;font-size:.95rem;z-index:2;}
+    .leg .b,.leg .p,.leg .d{grid-column:2;}
+    .leg .p{font-size:1.1rem;margin:1px 0;}
+    .leg:not(:last-child)::after{content:"";position:absolute;left:21px;top:50%;bottom:-50%;width:2px;height:auto;background:var(--glacier);opacity:.35;transform:none;}
   }
+  @media(max-width:520px){.daygrid{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
-<div id="expired-screen">
-  <div class="ic">🏔️</div>
-  <h1>This trip link has expired</h1>
-  <p>Thanks for following along with the Ruedas family Canadian Rockies adventure! This shared link is no longer active.</p>
-  <div class="sub">If you need the latest details, just ask Christian for a fresh link.</div>
-</div>
-
-
 <header class="hero">
   <div class="wrap hero-inner">
     <div class="eyebrow">A Ruedas Family Adventure · Summer 2026</div>
@@ -173,17 +224,13 @@
       <div class="chip">🎂 Baby turns <b>3</b> on the trip!</div>
       <div class="chip">🚐 Road trip · 4 home bases</div>
     </div>
-
     <div class="countdown" id="countdown">
-      <div class="cd-label">Counting<br>down to<br>departure</div>
+      <div class="cd-label" id="cd-label">Counting<br>down to<br>departure</div>
       <div class="cd-units" id="cd-units">
         <div class="cd-u"><div class="v" id="cd-d">37</div><div class="k">Days</div></div>
-        <div class="cd-sep">:</div>
-        <div class="cd-u"><div class="v" id="cd-h">00</div><div class="k">Hours</div></div>
-        <div class="cd-sep">:</div>
-        <div class="cd-u"><div class="v" id="cd-m">00</div><div class="k">Min</div></div>
-        <div class="cd-sep">:</div>
-        <div class="cd-u"><div class="v" id="cd-s">00</div><div class="k">Sec</div></div>
+        <div class="cd-sep">:</div><div class="cd-u"><div class="v" id="cd-h">00</div><div class="k">Hours</div></div>
+        <div class="cd-sep">:</div><div class="cd-u"><div class="v" id="cd-m">00</div><div class="k">Min</div></div>
+        <div class="cd-sep">:</div><div class="cd-u"><div class="v" id="cd-s">00</div><div class="k">Sec</div></div>
       </div>
     </div>
   </div>
@@ -196,12 +243,11 @@
 <div class="wrap">
   <div class="stats">
     <div class="stat"><div class="n">11</div><div class="l">Days</div><div class="s">10 nights</div></div>
-    <div class="stat"><div class="n">4</div><div class="l">Home Bases</div><div class="s">Canmore → Calgary</div></div>
+    <div class="stat"><div class="n">4</div><div class="l">Home Bases</div><div class="s">all booked ✓</div></div>
     <div class="stat"><div class="n">2</div><div class="l">Lake Cruises</div><div class="s">Moraine · Maligne</div></div>
     <div class="stat"><div class="n">16</div><div class="l">Hrs Daylight</div><div class="s">long July evenings</div></div>
   </div>
 
-  <!-- ROUTE -->
   <section>
     <div class="sec-head"><span class="num">01</span><h2>Our Route</h2><div class="rule"></div></div>
     <div class="route">
@@ -213,41 +259,126 @@
     </div>
   </section>
 
-  <!-- ITINERARY -->
   <section>
     <div class="sec-head"><span class="num">02</span><h2>Day by Day</h2><div class="rule"></div></div>
     <div class="legend">
-      <span><span class="dotb"></span> Planned highlight</span>
-      <span><span class="dotp"></span> Options — we'll choose based on the kids &amp; weather</span>
-      <span>👕 Suggested outfit for the day</span>
+      <span><span class="dotb"></span> Tap any day for the full plan</span>
+      <span>🔒 Reservation details locked inside</span>
     </div>
-    <div id="days">
-<div class="day"><div class="date"><div class="dn">Day 1</div><div class="dd">14</div><div class="dm">Tue Jul</div></div><div class="body"><div class="base"><span class="pin"></span>Canmore</div><p class="locked">Fly into Calgary, pick up the minivan, settle into the Canmore condo</p><p class="flex">Grocery run to stock the kitchen</p><p class="flex">Welcome charcuterie &amp; wine at the condo</p><p class="flex">Easy evening — Canmore stroll</p><div class="wear"><span class="e">✈️</span>Travel-comfy + a fleece for the plane &amp; cool evening arrival</div></div></div>
-<div class="day"><div class="date"><div class="dn">Day 2</div><div class="dd">15</div><div class="dm">Wed Jul</div></div><div class="body"><div class="base"><span class="pin"></span>Canmore</div><p class="flex">Banff Gondola (kid favorite)</p><p class="flex">Banff town &amp; Bow Falls</p><div class="wear"><span class="e">🚠</span>T-shirt + warm layer &amp; jacket — the summit is windy &amp; cold; comfy sneakers</div></div></div>
-<div class="day"><div class="date"><div class="dn">Day 3</div><div class="dd">16</div><div class="dm">Thu Jul</div></div><div class="body"><div class="base"><span class="pin"></span>Canmore</div><p class="flex">Johnston Canyon walk (bring the carrier)</p><p class="flex">Lake Minnewanka drive &amp; wildlife spotting</p><div class="wear"><span class="e">🥾</span>Hiking/closed-toe shoes, light layers, rain shell — canyon catwalks get misty</div></div></div>
-<div class="day"><div class="date"><div class="dn">Day 4</div><div class="dd">17</div><div class="dm">Fri Jul</div></div><div class="body"><div class="base"><span class="pin"></span>Canmore</div><p class="flex">Banff Upper Hot Springs</p><p class="flex">Cave &amp; Basin, easy trail, pool afternoon</p><div class="wear"><span class="e">🩱</span>Swimsuits under clothes + sandals &amp; a towel for the hot springs</div></div></div>
-<div class="day"><div class="date"><div class="dn">Day 5</div><div class="dd">18</div><div class="dm">Sat Jul</div></div><div class="body"><div class="base"><span class="pin"></span>Canmore</div><p class="flex">Flex day — canoe or a trail for the big kids</p><p class="flex">Pool &amp; playground for the little ones</p><div class="wear"><span class="e">👕</span>Easy active wear + swimsuits; quick-dry layers if canoeing</div></div></div>
-<div class="day"><div class="date"><div class="dn">Day 6</div><div class="dd">19</div><div class="dm">Sun Jul</div></div><div class="body"><div class="base"><span class="pin"></span>→ Lake Louise<span class="tag bday">🎂 turns 3</span></div><p class="locked">Move to our Lake Louise condo</p><p class="flex">Lake Louise shoreline</p><p class="flex">Emerald Lake &amp; Natural Bridge</p><p class="flex">🎂 Birthday treat in the village</p><div class="wear"><span class="e">📸</span>Layers + a nicer top for birthday photos; lakeshore is breezy &amp; cool</div></div></div>
-<div class="day"><div class="date"><div class="dn">Day 7</div><div class="dd">20</div><div class="dm">Mon Jul</div></div><div class="body"><div class="base"><span class="pin"></span>Lake Louise<span class="tag big">Big day</span></div><p class="locked">Moraine Lake — guided shuttle morning, with a Lake Louise stop</p><p class="flex">Afternoon: pool &amp; hot tub, relaxed village evening</p><div class="wear"><span class="e">🧥</span>Warmest layers + hats — early lakeside is COLD; sunscreen &amp; sunglasses</div></div></div>
-<div class="day"><div class="date"><div class="dn">Day 8</div><div class="dd">21</div><div class="dm">Tue Jul</div></div><div class="body"><div class="base"><span class="pin"></span>→ Jasper<span class="tag big">Big day</span></div><p class="locked">Drive the Icefields Parkway to Jasper — one of the world's great drives</p><p class="flex">Stops: Bow Lake, Peyto Lake, Athabasca Falls</p><p class="flex">Take it slow, plenty of photo pull-offs</p><div class="wear"><span class="e">🚗</span>Comfy car layers + a warm jacket for windy glacier viewpoints; slip-on shoes</div></div></div>
-<div class="day"><div class="date"><div class="dn">Day 9</div><div class="dd">22</div><div class="dm">Wed Jul</div></div><div class="body"><div class="base"><span class="pin"></span>Jasper</div><p class="locked">Maligne Lake &amp; Spirit Island boat cruise</p><p class="flex">Pyramid Lake &amp; Miette Hot Springs</p><p class="flex">Explore Jasper town</p><div class="wear"><span class="e">⛵</span>Layers + windbreaker for the open boat (cool on the water); swimsuits for Miette</div></div></div>
-<div class="day"><div class="date"><div class="dn">Day 10</div><div class="dd">23</div><div class="dm">Thu Jul</div></div><div class="body"><div class="base"><span class="pin"></span>→ Calgary</div><p class="locked">Drive back toward Calgary, overnight near the airport</p><p class="flex">Optional Calgary Zoo if there's energy</p><p class="flex">Hotel pool to unwind before flying</p><div class="wear"><span class="e">👟</span>Comfy walking shoes &amp; sun hats (zoo is warmer/lower); swimsuits for the pool</div></div></div>
-<div class="day"><div class="date"><div class="dn">Day 11</div><div class="dd">24</div><div class="dm">Fri Jul</div></div><div class="body"><div class="base"><span class="pin"></span>Fly home</div><p class="locked">Relaxed morning, then fly home from Calgary</p><p class="flex">Free hot breakfast &amp; airport shuttle at the hotel</p><div class="wear"><span class="e">✈️</span>Travel-comfy layers for the flight home</div></div></div>
-</div>
+    <div class="daygrid">
+      <button class="daycard" data-day="1" data-date="2026-07-14" data-lat="51.18" data-lon="-115.57" aria-label="Open Day 1 details">
+        <div class="dc-date"><span class="dc-dn">Day 1</span><span class="dc-dd">14</span><span class="dc-dm">Tue Jul</span></div>
+        <div class="dc-body">
+          <div class="dc-base"><span class="dc-pin"></span>Canmore<span class="lockicon" title="Encrypted reservation details inside">🔒</span></div>
+          <div class="dc-front">Fly in, pick up the minivan, settle into Canmore</div>
+          <div class="dc-wear"><span class="e">✈️</span>Travel-comfy + a fleece for the cool arrival</div>
+          <div class="dc-fc placeholder" data-fcslot>🌡️ seasonal avg</div><div class="dc-tap">Tap for full day →</div>
+        </div>
+      </button>
+      <button class="daycard" data-day="2" data-date="2026-07-15" data-lat="51.18" data-lon="-115.57" aria-label="Open Day 2 details">
+        <div class="dc-date"><span class="dc-dn">Day 2</span><span class="dc-dd">15</span><span class="dc-dm">Wed Jul</span></div>
+        <div class="dc-body">
+          <div class="dc-base"><span class="dc-pin"></span>Canmore</div>
+          <div class="dc-front">Banff Gondola + Banff town day</div>
+          <div class="dc-wear"><span class="e">🚠</span>T-shirt + warm layer & jacket; summit is cold/windy</div>
+          <div class="dc-fc placeholder" data-fcslot>🌡️ seasonal avg</div><div class="dc-tap">Tap for full day →</div>
+        </div>
+      </button>
+      <button class="daycard" data-day="3" data-date="2026-07-16" data-lat="51.18" data-lon="-115.57" aria-label="Open Day 3 details">
+        <div class="dc-date"><span class="dc-dn">Day 3</span><span class="dc-dd">16</span><span class="dc-dm">Thu Jul</span></div>
+        <div class="dc-body">
+          <div class="dc-base"><span class="dc-pin"></span>Canmore</div>
+          <div class="dc-front">Johnston Canyon + Lake Minnewanka</div>
+          <div class="dc-wear"><span class="e">🥾</span>Hiking/closed-toe shoes, layers, rain shell — catwalks get misty</div>
+          <div class="dc-fc placeholder" data-fcslot>🌡️ seasonal avg</div><div class="dc-tap">Tap for full day →</div>
+        </div>
+      </button>
+      <button class="daycard" data-day="4" data-date="2026-07-17" data-lat="51.18" data-lon="-115.57" aria-label="Open Day 4 details">
+        <div class="dc-date"><span class="dc-dn">Day 4</span><span class="dc-dd">17</span><span class="dc-dm">Fri Jul</span></div>
+        <div class="dc-body">
+          <div class="dc-base"><span class="dc-pin"></span>Canmore</div>
+          <div class="dc-front">Hot springs + easy day</div>
+          <div class="dc-wear"><span class="e">🩱</span>Swimsuits under clothes + sandals & towel</div>
+          <div class="dc-fc placeholder" data-fcslot>🌡️ seasonal avg</div><div class="dc-tap">Tap for full day →</div>
+        </div>
+      </button>
+      <button class="daycard" data-day="5" data-date="2026-07-18" data-lat="51.18" data-lon="-115.57" aria-label="Open Day 5 details">
+        <div class="dc-date"><span class="dc-dn">Day 5</span><span class="dc-dd">18</span><span class="dc-dm">Sat Jul</span></div>
+        <div class="dc-body">
+          <div class="dc-base"><span class="dc-pin"></span>Canmore</div>
+          <div class="dc-front">Flex day — your choice</div>
+          <div class="dc-wear"><span class="e">👕</span>Easy active wear + swimsuits; quick-dry if canoeing</div>
+          <div class="dc-fc placeholder" data-fcslot>🌡️ seasonal avg</div><div class="dc-tap">Tap for full day →</div>
+        </div>
+      </button>
+      <button class="daycard" data-day="6" data-date="2026-07-19" data-lat="51.43" data-lon="-116.18" aria-label="Open Day 6 details">
+        <div class="dc-date"><span class="dc-dn">Day 6</span><span class="dc-dd">19</span><span class="dc-dm">Sun Jul</span></div>
+        <div class="dc-body">
+          <div class="dc-base"><span class="dc-pin"></span>→ Lake Louise<span class="tag bday">🎂 turns 3</span><span class="lockicon" title="Encrypted reservation details inside">🔒</span></div>
+          <div class="dc-front">Move to Lake Louise · Baby turns 3!</div>
+          <div class="dc-wear"><span class="e">📸</span>Layers + a nicer top for birthday photos; lakeshore is cool</div>
+          <div class="dc-fc placeholder" data-fcslot>🌡️ seasonal avg</div><div class="dc-tap">Tap for full day →</div>
+        </div>
+      </button>
+      <button class="daycard" data-day="7" data-date="2026-07-20" data-lat="51.43" data-lon="-116.18" aria-label="Open Day 7 details">
+        <div class="dc-date"><span class="dc-dn">Day 7</span><span class="dc-dd">20</span><span class="dc-dm">Mon Jul</span></div>
+        <div class="dc-body">
+          <div class="dc-base"><span class="dc-pin"></span>Lake Louise<span class="tag big">Big day</span><span class="lockicon" title="Encrypted reservation details inside">🔒</span></div>
+          <div class="dc-front">Moraine Lake — the big one</div>
+          <div class="dc-wear"><span class="e">🧥</span>Warmest layers + hats — early lakeside is COLD; sunscreen</div>
+          <div class="dc-fc placeholder" data-fcslot>🌡️ seasonal avg</div><div class="dc-tap">Tap for full day →</div>
+        </div>
+      </button>
+      <button class="daycard" data-day="8" data-date="2026-07-21" data-lat="52.87" data-lon="-118.08" aria-label="Open Day 8 details">
+        <div class="dc-date"><span class="dc-dn">Day 8</span><span class="dc-dd">21</span><span class="dc-dm">Tue Jul</span></div>
+        <div class="dc-body">
+          <div class="dc-base"><span class="dc-pin"></span>→ Jasper<span class="tag big">Big day</span><span class="lockicon" title="Encrypted reservation details inside">🔒</span></div>
+          <div class="dc-front">Icefields Parkway drive to Jasper</div>
+          <div class="dc-wear"><span class="e">🚗</span>Comfy car layers + warm jacket for glacier viewpoints</div>
+          <div class="dc-fc placeholder" data-fcslot>🌡️ seasonal avg</div><div class="dc-tap">Tap for full day →</div>
+        </div>
+      </button>
+      <button class="daycard" data-day="9" data-date="2026-07-22" data-lat="52.87" data-lon="-118.08" aria-label="Open Day 9 details">
+        <div class="dc-date"><span class="dc-dn">Day 9</span><span class="dc-dd">22</span><span class="dc-dm">Wed Jul</span></div>
+        <div class="dc-body">
+          <div class="dc-base"><span class="dc-pin"></span>Jasper<span class="lockicon" title="Encrypted reservation details inside">🔒</span></div>
+          <div class="dc-front">Maligne Lake & Spirit Island cruise</div>
+          <div class="dc-wear"><span class="e">⛵</span>Layers + windbreaker for the open boat; swimsuits for Miette</div>
+          <div class="dc-fc placeholder" data-fcslot>🌡️ seasonal avg</div><div class="dc-tap">Tap for full day →</div>
+        </div>
+      </button>
+      <button class="daycard" data-day="10" data-date="2026-07-23" data-lat="51.05" data-lon="-114.07" aria-label="Open Day 10 details">
+        <div class="dc-date"><span class="dc-dn">Day 10</span><span class="dc-dd">23</span><span class="dc-dm">Thu Jul</span></div>
+        <div class="dc-body">
+          <div class="dc-base"><span class="dc-pin"></span>→ Calgary<span class="lockicon" title="Encrypted reservation details inside">🔒</span></div>
+          <div class="dc-front">Drive to Calgary, airport hotel</div>
+          <div class="dc-wear"><span class="e">👟</span>Comfy walking shoes & sun hats; swimsuits for the pool</div>
+          <div class="dc-fc placeholder" data-fcslot>🌡️ seasonal avg</div><div class="dc-tap">Tap for full day →</div>
+        </div>
+      </button>
+      <button class="daycard" data-day="11" data-date="2026-07-24" data-lat="51.05" data-lon="-114.07" aria-label="Open Day 11 details">
+        <div class="dc-date"><span class="dc-dn">Day 11</span><span class="dc-dd">24</span><span class="dc-dm">Fri Jul</span></div>
+        <div class="dc-body">
+          <div class="dc-base"><span class="dc-pin"></span>Fly home<span class="lockicon" title="Encrypted reservation details inside">🔒</span></div>
+          <div class="dc-front">Relaxed morning, fly home</div>
+          <div class="dc-wear"><span class="e">✈️</span>Travel-comfy layers for the flight home</div>
+          <div class="dc-fc placeholder" data-fcslot>🌡️ seasonal avg</div><div class="dc-tap">Tap for full day →</div>
+        </div>
+      </button></div>
   </section>
 
   <!-- WHERE WE'RE STAYING -->
   <section>
     <div class="sec-head"><span class="num">03</span><h2>Where We're Staying</h2><div class="rule"></div></div>
-    <div class="stays" id="stays">
-<div class="stay"><div class="t">Canmore Condo</div><div class="w">Base 1 · 5 nights · Jul 14–19</div><div class="d">Two-bedroom condo with full kitchen, indoor pool &amp; hot tub. Our home base for exploring Banff.</div></div>
-<div class="stay"><div class="t">Lake Louise Inn</div><div class="w">Base 2 · 2 nights · Jul 19–21</div><div class="d">Condo with a loft, right in Lake Louise village — pool, hot tub, and walkable to everything.</div></div>
-<div class="stay"><div class="t">Lobstick Lodge</div><div class="w">Base 3 · 2 nights · Jul 21–23</div><div class="d">In-town Jasper lodge with a full-kitchen family room (sleeps 6), pool, hot tubs &amp; the Crazy Elk Café on-site.</div></div>
-<div class="stay"><div class="t">Calgary Airport Hotel</div><div class="w">Base 4 · 1 night · Jul 23–24</div><div class="d">All-suite hotel minutes from the airport — kitchen, hot breakfast, pool, and a free airport shuttle.</div></div>
-</div>
+    <div class="stays">
+      <div class="stay"><div class="t">Canmore Condo</div><div class="w">Base 1 · 5 nights · Jul 14–19</div><div class="d">Two-bedroom condo with full kitchen, indoor pool &amp; hot tub. Our home base for exploring Banff.</div></div>
+      <div class="stay"><div class="t">Lake Louise Inn</div><div class="w">Base 2 · 2 nights · Jul 19–21</div><div class="d">Condo with a loft, right in Lake Louise village — pool, hot tub, and walkable to everything.</div></div>
+      <div class="stay"><div class="t">Lobstick Lodge</div><div class="w">Base 3 · 2 nights · Jul 21–23</div><div class="d">In-town Jasper lodge with a full-kitchen family room (sleeps 6), pool, hot tubs &amp; the Crazy Elk Café on-site.</div></div>
+      <div class="stay"><div class="t">Calgary Airport Hotel</div><div class="w">Base 4 · 1 night · Jul 23–24</div><div class="d">All-suite hotel minutes from the airport — kitchen, hot breakfast, pool, and a free airport shuttle.</div></div>
+    </div>
   </section>
 
-  <!-- INCLUDED / SPECIAL TOUCHES -->
+  <!-- SPECIAL TOUCHES -->
   <section>
     <div class="sec-head"><span class="num">04</span><h2>Special Touches Along the Way</h2><div class="rule"></div></div>
     <div class="perks">
@@ -312,64 +443,164 @@
   </section>
 </div>
 
+<!-- FULL-SCREEN DETAIL OVERLAY -->
+<div id="overlay" role="dialog" aria-modal="true">
+  <div class="detail" id="detail"></div>
+</div>
+
 <footer>
   <div class="h">See you in the mountains 🏔️</div>
   <div>Ruedas family · Canadian Rockies · July 2026</div>
 </footer>
 
 <script>
-// ---------- link expiry gate ----------
+const DETAIL={"1": {"title": "Day 1 \u00b7 Tue Jul 14", "base": "Canmore", "front": "Fly in, pick up the minivan, settle into Canmore", "wear_e": "\u2708\ufe0f", "wear": "Travel-comfy + a fleece for the cool arrival", "completed": ["Flight booked (LAX\u2192YYC nonstop)", "Minivan reserved (7-seat Pacifica)", "Canmore condo booked (5 nights)"], "pending": ["Prepay checked bags before airport", "Grocery run on arrival"], "activities": []}, "2": {"title": "Day 2 \u00b7 Wed Jul 15", "base": "Canmore", "front": "Banff Gondola + Banff town day", "wear_e": "\ud83d\udea0", "wear": "T-shirt + warm layer & jacket; summit is cold/windy", "completed": [], "pending": ["Buy Banff Gondola tickets online (advance booking recommended \u2014 sells out in peak summer; ages 5 & under free)"], "activities": [{"name": "Banff Gondola", "note": "Book ahead \u2014 peak July slots fill fast", "url": "https://www.banffjaspercollection.com/attractions/banff-gondola/tickets/"}, {"name": "Bow Falls & Banff town", "note": "Free \u2014 walk-up", "url": ""}]}, "3": {"title": "Day 3 \u00b7 Thu Jul 16", "base": "Canmore", "front": "Johnston Canyon + Lake Minnewanka", "wear_e": "\ud83e\udd7e", "wear": "Hiking/closed-toe shoes, layers, rain shell \u2014 catwalks get misty", "completed": [], "pending": ["Johnston Canyon \u2014 go early for parking", "Optional: Lake Minnewanka cruise (book ahead)"], "activities": [{"name": "Johnston Canyon", "note": "Free walk-up \u00b7 bring the child carrier", "url": "https://www.pc.gc.ca/en/pn-np/ab/banff/activ/randonnee-hiking/johnston"}, {"name": "Lake Minnewanka Cruise", "note": "1-hr scenic cruise \u00b7 book ahead, nonrefundable", "url": "https://www.banffjaspercollection.com/attractions/lake-minnewanka-cruise/"}]}, "4": {"title": "Day 4 \u00b7 Fri Jul 17", "base": "Canmore", "front": "Hot springs + easy day", "wear_e": "\ud83e\ude71", "wear": "Swimsuits under clothes + sandals & towel", "completed": [], "pending": ["Banff Upper Hot Springs (walk-up)", "Pool afternoon to recharge"], "activities": [{"name": "Banff Upper Hot Springs", "note": "Walk-up \u00b7 pay at door", "url": "https://www.hotsprings.ca/banff-upper-hot-springs"}, {"name": "Cave & Basin NHS", "note": "Easy, kid-friendly history stop", "url": "https://www.pc.gc.ca/en/lhn-nhs/ab/caveandbasin"}]}, "5": {"title": "Day 5 \u00b7 Sat Jul 18", "base": "Canmore", "front": "Flex day \u2014 your choice", "wear_e": "\ud83d\udc55", "wear": "Easy active wear + swimsuits; quick-dry if canoeing", "completed": [], "pending": ["Decide morning-of based on energy & weather"], "activities": [{"name": "Canoe at Banff/Canmore", "note": "Optional \u00b7 seasonal rentals", "url": ""}, {"name": "Pool & playground", "note": "Built-in downtime for the little ones", "url": ""}]}, "6": {"title": "Day 6 \u00b7 Sun Jul 19", "base": "\u2192 Lake Louise", "front": "Move to Lake Louise \u00b7 Baby turns 3!", "wear_e": "\ud83d\udcf8", "wear": "Layers + a nicer top for birthday photos; lakeshore is cool", "completed": ["Lake Louise Inn condo booked (2 nights)"], "pending": ["Check in (BRING AAA CARD)", "Birthday treat in the village"], "activities": [{"name": "Lake Louise shoreline", "note": "Free \u00b7 iconic turquoise lake", "url": ""}, {"name": "Emerald Lake & Natural Bridge", "note": "Yoho NP \u00b7 short drive", "url": ""}]}, "7": {"title": "Day 7 \u00b7 Mon Jul 20", "base": "Lake Louise", "front": "Moraine Lake \u2014 the big one", "wear_e": "\ud83e\udde5", "wear": "Warmest layers + hats \u2014 early lakeside is COLD; sunscreen", "completed": ["Moraine Lake Bus tour booked (8:55a, incl. Lake Louise stop)"], "pending": ["Afternoon: pool & hot tub at the inn"], "activities": []}, "8": {"title": "Day 8 \u00b7 Tue Jul 21", "base": "\u2192 Jasper", "front": "Icefields Parkway drive to Jasper", "wear_e": "\ud83d\ude97", "wear": "Comfy car layers + warm jacket for glacier viewpoints", "completed": ["Lobstick Lodge booked (2 nights, Jasper)"], "pending": ["Start early \u2014 longest drive day", "Stops: Bow Lake, Peyto Lake, Athabasca Falls"], "activities": [{"name": "Icefields Parkway", "note": "Free \u00b7 one of the world's great drives", "url": ""}, {"name": "Skip: Glacier Skywalk", "note": "Paid \u00b7 we decided to pass", "url": ""}]}, "9": {"title": "Day 9 \u00b7 Wed Jul 22", "base": "Jasper", "front": "Maligne Lake & Spirit Island cruise", "wear_e": "\u26f5", "wear": "Layers + windbreaker for the open boat; swimsuits for Miette", "completed": ["Maligne Lake Cruise booked (12:45p)"], "pending": ["Leave town ~11:15a (dock 45\u201360 min)", "Optional: Pyramid Lake, Miette Hot Springs"], "activities": [{"name": "Miette Hot Springs", "note": "$8 adult / $7 kids \u00b7 walk-up", "url": "https://www.hotsprings.ca/miette-hot-springs"}, {"name": "Pyramid Lake", "note": "Free \u00b7 canoe rentals on-site", "url": ""}]}, "10": {"title": "Day 10 \u00b7 Thu Jul 23", "base": "\u2192 Calgary", "front": "Drive to Calgary, airport hotel", "wear_e": "\ud83d\udc5f", "wear": "Comfy walking shoes & sun hats; swimsuits for the pool", "completed": ["Homewood Suites airport booked (1 night)"], "pending": ["Break up the ~4-hr drive", "Optional: Calgary Zoo if energy allows"], "activities": [{"name": "Calgary Zoo", "note": "Buy online day-of \u00b7 great for kids", "url": "https://www.calgaryzoo.com/"}]}, "11": {"title": "Day 11 \u00b7 Fri Jul 24", "base": "Fly home", "front": "Relaxed morning, fly home", "wear_e": "\u2708\ufe0f", "wear": "Travel-comfy layers for the flight home", "completed": ["Return flight booked (YYC\u2192LAX 2:45p)"], "pending": ["Return minivan at YYC", "Free hot breakfast & airport shuttle"], "activities": []}};
+const CIPHER={"1":"uNtVYOvOsdpHFaMmktTlLq6dnyJ5QlP8i5kEfdB0PhR0swAUk/P4AqIMAaxmwlB7RlFmPvW4fhJZMIKZnKoXMmkukc7rgsNadPDzJf6nysOJjKJpDLY80yd/ZkRGwM8Y3MAlF4FpsJD1LPdE/baiNFOsg746icco0DciZbbX7uPYyndnEJ1O85O6Q5mNV95tGt2Ylykz2EDNiuuGJObRZlQmgKtJAFgU4M3AM9mF88EvtP1sPi8z2cb+S09qW0rBtzUgz7ePbh7Cn8oS84WLAKpR0x8we6FC4uhuFHVux6i02I71srKNZh+vCv0k3zTDcUNMsX5wZfFFiuQsnsTpJSY0SQRc2eOkBGdrFoKUdBN1PMxWaf0kKnNkwWpkBEf0B3jk0U8bauGeyvzd4Bn9JQT3g7or5fCB4iRykl+/mPBY73pnmcRMnLh4sY4dgssJJuaAsoT38aWcvruvVZzvrxTHKEiSw4MolXKZ1IGa7DZz6j9Jz6r3tWcjYjSLqqzGGEc10WluIJhCakr4nOOQAEUBkQBhr6UeyYSEE/s4+t59yVNRpGycXgjs5Dsy29P9mS+3QaS5dH+3A0jgmhiRG/Od9ecORAnwd3MYIo4PXCtCZQrFw3o6bZiITqk2RszbNWiGvB8WLCdKv9AvPQiq0z7PwK7eFsoNFo9XsPrLGcNGjj/vsrmoIsR7q3ryr1YPJY4peBO90ps5yQ74rrk=","6":"UZT12MwngpSaHEhy5Bt271O4jCzq59Wubq1lkYb46YQR9+W9O+1TnkIuIyNpU7bxewmbQ7Roi7HOb3Gxv8dc/PHqbKZPVsJo2RiudxofZLDS1+Nv5CichnL3urErSqGSakj00d3DblVC78Jv3S5O0Z99O9lNVXqAgwWAxgbPpxfsR7ey6hiGgj+tJS87rfOgmCywktKVrhuHugQNpRNoJcW8FzQDNZS0qrp9zYyPdiUgwMvknEjA4RUVNtgVj+WKkKnkQgQr8NsxOTN9LYhK5hXG/pZQMnIoCIh6jF0GwlWO1Xk6ilUYAXFS/qPSjD9ny+Ek","7":"RZZt8T6jUchn/r8HCxBDKRbq3+RiIsNL4p4f/qMbhYQIe4bxoNuShkPiKPD1wlGSNpm0PyHVPoLvDHdQJx81T+WrtplMDpN1GI5Htv/Br0hwmgb4l7VfgsNybidc2xENqvbxaL5Tvr7OtOrVfJJkhOSNV7mJtAeTrwUhDqlAh+vKmefq1aDon8fPyYNNW6qUrTnVKSt9C9O8G1MoFb7OSXm0XFWkWe1Yomj8J/+eENBpvi4=","8":"KtWGX2SN+5p/tJ5m+mmf99q2aFh9cxUom26pK64zTJGkP/rpeuBrFa5UyLok9qIUqND0/7zkzqxxH0BAvWwD+Lm9FZ7iyp0TI4XaQTMwTvCziRPe6EtVlqXFmH9cRPPYYKaRAZHoHezGB9jGS+Jf58yMopmB0zzZrwYZmqF5B4nWU321FuYIBdh3tk1fQgRpaJyXaKrmsm+Tdm2/7h0=","9":"M7m+JWEuf5cXU2Tb7AZP9OfaEWEtYM1bhNXzDhZyuLYpkvhXUJ5hWkzf2sFJAkEgJ/fhCHF/2beqtmLz6pZJIIPYoVQznKHQgGRjhqSpDFbb5suHPEpQNYEMunOO9XsaJ192AAyl66CSxvo2qLSprWJn0+1v+0gZIWrupYXf20mC2sI8w7lVgH6kENH6Du7c2e583W3IWB7SP/QSwnsOBSEaylAnpSvCu0Bc8kh4VUUbXeYIFfxk8ATbFT6G","10":"d4r+2T4OBDDHwCGNB6be49tgZhgLrzjOpUiMWYtZYlAXJwYJ0DlDkjgTOI5c12uK8GBjP36C7a8JobqgH7Ne1Ej94C7OMxyk/f2mFLr+I658wrlKywcA1UmNFhfpKmVdmatGVK+WQhhtn4vQfj/Almid9JGzr7nllPh8tIrB7cBx4qsPeg504JMXsRLaaUoq+9FwTTfQxNadjZgau7E1jskJ2DfAg0u08UuvzMsczI5cJYb4bXzvStSDLu3dygGopTQ=","11":"ihYkia3S92Kf38MivoXgZcU6YRw+zkI37akThexdc3CSkRuiUoiTR97OpFQi2QmOaDq50hd/Dhq5PmfCcpHu2rLCnxGlw8rLTYzmxYcXpjEKdNB1UflVtkGohfOrggjOEjAHI8Si6MIFxtQof/cLSt+8EgUAn7HGANJ4rwDe1nNFX1BifHroV653UVTBn3lDP30Kz8QeQZrfUxZvMxQ+/DhqqhQ9axp+5ZWf6A+Tiwiy5Hw1cAIDlTibdfE5CZIXUfDfjP3asrxz/gLoZeuJpwb+DjKgMU0="};
+
+// ---------- countdown (2-phase) ----------
 (function(){
-  try{
-    const params=new URLSearchParams(window.location.search);
-    const exp=params.get('exp');
-    if(exp){
-      const expMs=parseInt(exp,10);
-      if(!isNaN(expMs) && Date.now()>expMs){
-        document.getElementById('expired-screen').style.display='flex';
-        document.body.style.overflow='hidden';
+  const start=new Date(Date.UTC(2026,6,14,13,30,0)), end=new Date(Date.UTC(2026,6,24,20,45,0));
+  const labelEl=document.getElementById('cd-label');
+  function fmt(diff){const d=Math.floor(diff/86400);diff-=d*86400;const h=Math.floor(diff/3600);diff-=h*3600;const m=Math.floor(diff/60),s=diff-m*60;
+    document.getElementById('cd-d').textContent=d;document.getElementById('cd-h').textContent=String(h).padStart(2,'0');
+    document.getElementById('cd-m').textContent=String(m).padStart(2,'0');document.getElementById('cd-s').textContent=String(s).padStart(2,'0');}
+  function tick(){const now=new Date(),box=document.getElementById('cd-units');
+    if(now<start){if(labelEl)labelEl.innerHTML='Counting<br>down to<br>departure';fmt(Math.floor((start-now)/1000));}
+    else if(now<end){if(labelEl)labelEl.innerHTML='Time left<br>in the<br>trip';fmt(Math.floor((end-now)/1000));}
+    else{if(labelEl)labelEl.innerHTML='';box.innerHTML='<div class="cd-done">🏔️ What an adventure — until next time!</div>';}}
+  tick();setInterval(tick,1000);
+})();
+
+// ---------- AES-GCM decrypt ----------
+async function decryptData(b64, passphrase){
+  const dec=new TextDecoder(), raw=Uint8Array.from(atob(b64),c=>c.charCodeAt(0));
+  const salt=raw.slice(0,16),iv=raw.slice(16,28),ct=raw.slice(28),enc=new TextEncoder();
+  const km=await crypto.subtle.importKey('raw',enc.encode(passphrase),'PBKDF2',false,['deriveKey']);
+  const key=await crypto.subtle.deriveKey({name:'PBKDF2',salt,iterations:250000,hash:'SHA-256'},km,{name:'AES-GCM',length:256},false,['decrypt']);
+  const pt=await crypto.subtle.decrypt({name:'AES-GCM',iv},key,ct);
+  return dec.decode(pt);
+}
+
+
+// ---------- live per-day forecast (Open-Meteo, no key) ----------
+const WCODE={0:["☀️","Clear"],1:["🌤️","Mostly clear"],2:["⛅","Partly cloudy"],3:["☁️","Cloudy"],
+ 45:["🌫️","Fog"],48:["🌫️","Fog"],51:["🌦️","Light drizzle"],53:["🌦️","Drizzle"],55:["🌧️","Drizzle"],
+ 61:["🌦️","Light rain"],63:["🌧️","Rain"],65:["🌧️","Heavy rain"],71:["🌨️","Light snow"],73:["🌨️","Snow"],
+ 75:["❄️","Heavy snow"],80:["🌦️","Showers"],81:["🌧️","Showers"],82:["⛈️","Heavy showers"],
+ 95:["⛈️","Thunderstorm"],96:["⛈️","Thunderstorm"],99:["⛈️","Thunderstorm"]};
+function wInfo(code){return WCODE[code]||["🌡️","—"];}
+const FC={}; // cache by "lat,lon,date" -> {hi,lo,rain,code}
+
+async function fetchForecast(lat,lon){
+  const url=`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}`+
+    `&daily=temperature_2m_max,temperature_2m_min,precipitation_probability_max,weather_code`+
+    `&temperature_unit=fahrenheit&forecast_days=16&timezone=America/Edmonton`;
+  const r=await fetch(url); if(!r.ok) throw new Error('fc'); const j=await r.json();
+  const d=j.daily; const out={};
+  d.time.forEach((t,i)=>{ out[t]={hi:Math.round(d.temperature_2m_max[i]),lo:Math.round(d.temperature_2m_min[i]),
+    rain:d.precipitation_probability_max[i],code:d.weather_code[i]}; });
+  return out;
+}
+async function loadForecasts(){
+  // group cards by location to minimize calls
+  const cards=[...document.querySelectorAll('.daycard[data-date]')];
+  const locs={};
+  cards.forEach(c=>{const k=c.dataset.lat+','+c.dataset.lon; (locs[k]=locs[k]||[]).push(c);});
+  for(const [k,cs] of Object.entries(locs)){
+    const [lat,lon]=k.split(',');
+    let data=null; try{ data=await fetchForecast(lat,lon); }catch(e){ data=null; }
+    cs.forEach(c=>{
+      const slot=c.querySelector('[data-fcslot]'); const date=c.dataset.date;
+      if(data && data[date]){
+        const f=data[date]; const [emo,lab]=wInfo(f.code);
+        FC[c.dataset.day]={...f,emo,lab};
+        slot.className='dc-fc'; slot.innerHTML=`<span class="fe">${emo}</span> ${f.hi}° / ${f.lo}°`+(f.rain!=null?` · ${f.rain}% rain`:'');
+      } else {
+        // out of forecast window or fetch failed -> graceful placeholder
+        slot.className='dc-fc placeholder';
+        slot.innerHTML='🌡️ forecast closer to date';
       }
-    }
-  }catch(e){/* if anything fails, show the trip (fail-open) */}
-})();
-
-
-// live countdown (2-phase: to-trip, then time-left)
-(function(){
-  const start = new Date(Date.UTC(2026,6,14,13,30,0));
-  const end   = new Date(Date.UTC(2026,6,24,20,45,0));
-  const labelEl = document.querySelector('#countdown .cd-label');
-  function fmt(diff){
-    const d=Math.floor(diff/86400); diff-=d*86400;
-    const h=Math.floor(diff/3600); diff-=h*3600;
-    const m=Math.floor(diff/60); const s=diff-m*60;
-    document.getElementById('cd-d').textContent=d;
-    document.getElementById('cd-h').textContent=String(h).padStart(2,'0');
-    document.getElementById('cd-m').textContent=String(m).padStart(2,'0');
-    document.getElementById('cd-s').textContent=String(s).padStart(2,'0');
+    });
   }
-  function tick(){
-    const now=new Date();
-    const box=document.getElementById('cd-units');
-    if(now < start){
-      if(labelEl) labelEl.innerHTML='Counting<br>down to<br>departure';
-      fmt(Math.floor((start-now)/1000));
-    } else if(now < end){
-      if(labelEl) labelEl.innerHTML='Time left<br>in the<br>trip';
-      fmt(Math.floor((end-now)/1000));
-    } else {
-      if(labelEl) labelEl.innerHTML='';
-      box.innerHTML='<div class="cd-done">🏔️ What an adventure — until next time!</div>';
-    }
+}
+loadForecasts();
+
+// ---------- detail overlay ----------
+const overlay=document.getElementById('overlay'), detail=document.getElementById('detail');
+let unlockedPass=null; // remember passphrase for the session once entered
+
+function esc(s){return (s||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));}
+
+function fcBanner(day){
+  const f=FC[day];
+  if(f){ return `<div class="dfc"><span class="big">${f.emo}</span><div><div class="ti">Forecast · ${f.lab}</div><div class="tv">${f.hi}° / ${f.lo}°</div><div class="sub">${f.rain!=null?f.rain+'% chance of rain':''}</div></div></div>`; }
+  return `<div class="dfc placeholder"><span class="big">🗓️</span><div><div class="ti">Forecast</div><div class="tv">Available ~2 weeks out</div><div class="sub">Showing seasonal averages until then</div></div></div>`;
+}
+function renderDetail(day){
+  const D=DETAIL[day]; if(!D)return;
+  const comp=D.completed.length?`<div class="dgroup"><h4>Completed <span class="badge done">Booked</span></h4><ul class="dlist done">${D.completed.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`:'';
+  const pend=D.pending.length?`<div class="dgroup"><h4>To Do / Plan <span class="badge pend">Pending</span></h4><ul class="dlist pend">${D.pending.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>`:'';
+  let acts='';
+  if(D.activities&&D.activities.length){
+    acts='<div class="dgroup"><h4>Activities &amp; Booking</h4><div class="acts">'+D.activities.map(a=>{
+      if(a.url){return `<a class="act" href="${esc(a.url)}" target="_blank" rel="noopener"><div class="ai"><div class="nm">${esc(a.name)}</div><div class="nt">${esc(a.note)}</div></div><div class="go">Book ↗</div></a>`;}
+      return `<div class="act nolink"><div class="ai"><div class="nm">${esc(a.name)}</div><div class="nt">${esc(a.note)}</div></div><div class="go">Info</div></div>`;
+    }).join('')+'</div></div>';
   }
-  tick(); setInterval(tick,1000);
-})();
-
-
-
-
-
-
+  let res='';
+  if(CIPHER[day]){
+    res=`<div class="dgroup"><h4>Reservations 🔒</h4>
+      <div class="resbox" data-day="${day}">
+        <div class="lockhd">🔒 Encrypted reservation details</div>
+        <div class="hint">Enter the family passcode to view confirmation numbers &amp; flight details.</div>
+        <div class="reslocked">
+          <input type="password" class="passin" placeholder="Family passcode" autocomplete="off">
+          <button class="unlockbtn">Unlock</button>
+          <div class="err">Incorrect passcode — try again.</div>
+        </div>
+        <div class="resreveal"></div>
+      </div></div>`;
+  }
+  detail.innerHTML=`
+    <button class="closebtn" aria-label="Close">×</button>
+    <div class="detail-hd">
+      <div class="ey">${esc(D.base)}</div>
+      <h3>${esc(D.title)}</h3>
+      <div class="base">${esc(D.front)}</div>
+    </div>
+    <div class="detail-bd">
+      ${fcBanner(day)}
+      <div class="dwear"><span class="e">${D.wear_e}</span>${esc(D.wear)}</div>
+      ${comp}${pend}${acts}${res}
+    </div>`;
+  detail.querySelector('.closebtn').addEventListener('click',closeOverlay);
+  const rb=detail.querySelector('.resbox');
+  if(rb){
+    const btn=rb.querySelector('.unlockbtn'), inp=rb.querySelector('.passin'),
+          err=rb.querySelector('.err'), reveal=rb.querySelector('.resreveal'),
+          locked=rb.querySelector('.reslocked');
+    async function doUnlock(){
+      const pass=inp.value||unlockedPass; if(!pass)return;
+      try{
+        const json=await decryptData(CIPHER[day],pass);
+        const data=JSON.parse(json);
+        unlockedPass=pass;
+        reveal.innerHTML=data.items.map(it=>`<div class="ri"><div class="rl">${esc(it.label)}</div><div class="rv">${esc(it.val)}</div></div>`).join('')+`<span class="reslock-again">🔒 Hide again</span>`;
+        locked.style.display='none'; reveal.style.display='block'; err.style.display='none';
+        reveal.querySelector('.reslock-again').addEventListener('click',()=>{reveal.style.display='none';locked.style.display='block';inp.value='';});
+      }catch(e){ err.style.display='block'; }
+    }
+    btn.addEventListener('click',doUnlock);
+    inp.addEventListener('keydown',e=>{if(e.key==='Enter')doUnlock();});
+    // auto-unlock if already entered this session
+    if(unlockedPass){ doUnlock(); }
+  }
+}
+function openOverlay(day){renderDetail(day);overlay.classList.add('show');document.body.style.overflow='hidden';}
+function closeOverlay(){overlay.classList.remove('show');document.body.style.overflow='';}
+document.querySelectorAll('.daycard').forEach(c=>c.addEventListener('click',()=>openOverlay(c.dataset.day)));
+overlay.addEventListener('click',e=>{if(e.target===overlay)closeOverlay();});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&overlay.classList.contains('show'))closeOverlay();});
 </script>
 </body>
 </html>
