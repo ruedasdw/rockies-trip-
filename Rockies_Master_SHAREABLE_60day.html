@@ -5,7 +5,7 @@
 <meta name="robots" content="noindex, nofollow, noarchive">
 <meta name="googlebot" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ruedas Family · Canadian Rockies 2026</title>
+<title>Rockies 2026 · MASTER — Shareable (60-day)</title>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
@@ -139,7 +139,7 @@
   .act.nolink{opacity:.85;}
   .act.nolink .go{color:var(--sage);}
   /* reservations / encrypted */
-  .resbox{border:1.5px dashed var(--glacier);border-radius:14px;padding:18px;background:rgba(63,125,140,.06);}
+  .resbox,.pricebox-wrap{border:1.5px dashed var(--glacier);border-radius:14px;padding:18px;background:rgba(63,125,140,.06);}
   .resbox .lockhd{display:flex;align-items:center;gap:8px;font-weight:600;color:var(--pine);margin-bottom:6px;}
   .resbox .hint{font-size:.84rem;color:var(--muted);margin-bottom:12px;}
   .resbox input{width:100%;padding:11px 13px;border-radius:10px;border:1.5px solid var(--line);font-size:.95rem;font-family:'Outfit';margin-bottom:10px;}
@@ -196,6 +196,65 @@
   @media(max-width:760px){.perks{grid-template-columns:1fr;}.stays,.packwrap{grid-template-columns:1fr;}}
 
 
+  /* MASTER pricing/budget */
+  .bcards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;}
+  .bk{border:1px solid var(--line);border-radius:14px;padding:18px;background:var(--paper);position:relative;overflow:hidden;}
+  .bk::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--glacier);}
+  .bk.pend::before{background:var(--gold);}
+  .bk .t{font-family:'Fraunces',serif;font-size:1.05rem;font-weight:600;color:var(--pine);margin-bottom:3px;}
+  .bk .meta{font-size:.83rem;color:var(--muted);}
+  .bk .row{display:flex;justify-content:space-between;align-items:flex-end;margin-top:9px;}
+  .bk .conf{font-size:.74rem;color:var(--sage);}
+  .bk .booklink{display:inline-block;margin-top:10px;font-size:.76rem;font-weight:700;color:var(--glacier);text-decoration:none;}
+  .bk .booklink:hover{text-decoration:underline;}
+  .bk .price{font-family:'Fraunces',serif;font-weight:600;color:var(--glacier);font-size:1.1rem;}
+  .bk .status{position:absolute;top:13px;right:13px;font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;padding:3px 9px;border-radius:20px;background:#d6ecd8;color:#2f7d44;}
+  .bk .status.p{background:#f6e6c9;color:#9a6a1e;}
+  .bgrid{display:grid;grid-template-columns:1.3fr 1fr;gap:22px;align-items:start;}
+  .bars{display:flex;flex-direction:column;gap:11px;}
+  .barow{display:grid;grid-template-columns:150px 1fr 72px;align-items:center;gap:12px;font-size:.88rem;}
+  .barow .nm{color:var(--ink);font-weight:500;}
+  .btrack{height:13px;background:#e7eee9;border:1px solid #d4ddd6;border-radius:8px;overflow:hidden;display:block;}
+  .bfill{display:block;height:13px;background-color:var(--turq);border-radius:8px;}
+  .bfill.est{background-color:var(--sage);}
+  .barow .v{text-align:right;font-variant-numeric:tabular-nums;color:var(--muted);font-weight:600;}
+  .bsum{background:var(--pine);color:var(--paper);border-radius:16px;padding:24px;}
+  .bsum .line{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.13);font-size:.92rem;}
+  .bsum .line:last-child{border-bottom:none;}
+  .bsum .line.grand{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:600;padding-top:14px;}
+  .bsum .line.grand .gv{color:var(--gold);}
+  .bsum .tgt{font-size:.82rem;color:#cdd9d2;margin-top:10px;line-height:1.5;}
+  .bsum .over{color:#f0c98a;font-weight:600;}
+  @media(max-width:760px){.bcards{grid-template-columns:1fr;}.bgrid{grid-template-columns:1fr;}.barow{grid-template-columns:110px 1fr 58px;font-size:.8rem;}}
+
+
+
+  /* estimate calculator */
+  .calc{background:linear-gradient(160deg,var(--pine-deep),var(--pine) 70%);color:var(--paper);border-radius:20px;padding:28px;box-shadow:0 18px 44px -24px rgba(21,42,36,.6);}
+  .calc h3{font-family:'Fraunces',serif;font-size:1.5rem;margin-bottom:6px;color:#fff;}
+  .calc .lead{color:#e9efe9;font-size:.92rem;margin-bottom:20px;max-width:640px;}
+  .calc-controls{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:22px;align-items:flex-end;}
+  .calc-field{flex:1;min-width:140px;}
+  .calc-field label{display:block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--glacier-light);font-weight:700;margin-bottom:7px;}
+  .calc-field select{width:100%;padding:12px 14px;border-radius:10px;border:1.5px solid rgba(255,255,255,.25);background:rgba(255,255,255,.10);color:#fff;font-size:1rem;font-family:'Outfit';cursor:pointer;}
+  .calc-field select option{color:#23211c;}
+  .calc-btn{width:100%;background:var(--gold);color:var(--pine-deep);border:none;border-radius:10px;padding:13px 20px;font-weight:700;font-size:.95rem;cursor:pointer;font-family:'Outfit';transition:transform .12s;}
+  .calc-btn:active{transform:scale(.98);}
+  .calc-result{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.2);border-radius:16px;padding:22px;}
+  .calc-total{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:600;color:var(--gold);line-height:1;}
+  .calc-total .lbl{font-family:'Outfit';font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--glacier-light);font-weight:700;display:block;margin-bottom:6px;}
+  .calc-conf{display:inline-block;margin-top:10px;font-size:.8rem;font-weight:600;background:rgba(201,162,75,.2);border:1px solid var(--gold);color:#f0d9a8;border-radius:20px;padding:4px 12px;}
+  .calc-break{margin-top:18px;display:flex;flex-direction:column;gap:7px;}
+  .cb-row{display:flex;justify-content:space-between;align-items:center;font-size:.88rem;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.1);}
+  .cb-row:last-child{border-bottom:none;}
+  .cb-row .nm{color:#e9efe9;display:flex;align-items:center;gap:8px;}
+  .cb-row .v{font-variant-numeric:tabular-nums;font-weight:600;color:#fff;}
+  .cb-tag{font-size:.6rem;letter-spacing:.06em;text-transform:uppercase;font-weight:700;padding:2px 7px;border-radius:12px;}
+  .cb-tag.known{background:#d6ecd8;color:#2f7d44;}
+  .cb-tag.est{background:#f6e6c9;color:#9a6a1e;}
+  .calc-note{font-size:.8rem;color:#cdd9d2;margin-top:16px;line-height:1.5;}
+  .calc-note b{color:#f0d9a8;}
+
   footer{margin-top:50px;padding:30px 0 50px;text-align:center;color:var(--muted);font-size:.82rem;border-top:1px solid var(--line);}
   footer .h{font-family:'Fraunces',serif;color:var(--pine);font-size:1rem;margin-bottom:4px;}
 
@@ -214,6 +273,12 @@
 </style>
 </head>
 <body>
+<div id="expired-screen">
+  <div class="ic">🏔️</div>
+  <h1>This link has expired</h1>
+  <p>This shared master link is no longer active. Please ask Christian for a fresh link.</p>
+</div>
+<div style="background:#b4623a;color:#fff;text-align:center;font-size:.8rem;font-weight:600;letter-spacing:.04em;padding:8px 12px;">🔒 MASTER · SHAREABLE COPY — expires in 60 days. Pricing + reservations passcode-locked.</div>
 <header class="hero">
   <div class="wrap hero-inner">
     <div class="eyebrow">A Ruedas Family Adventure · Summer 2026</div>
@@ -442,6 +507,65 @@
       </ul>
     </div>
   </section>
+
+  
+
+  
+
+
+  <!-- PRICING (master only, second password) -->
+  <section>
+    <div class="sec-head"><span class="num">06</span><h2>Pricing &amp; Budget</h2><div class="rule"></div></div>
+    <div class="pricebox-wrap" id="pricebox" style="max-width:520px;">
+      <div class="lockhd">🔒 Pricing locked</div>
+      <div class="hint">Enter the pricing passcode to view what we paid, the full booking grid, and the budget.</div>
+      <div class="reslocked">
+        <input type="password" class="passin" id="pricepass" placeholder="Pricing passcode" autocomplete="off">
+        <button class="unlockbtn" id="priceunlock">Unlock pricing</button>
+        <div class="err" id="priceerr">Incorrect passcode — try again.</div>
+      </div>
+    </div>
+    <div id="pricereveal" style="display:none;margin-top:18px;"></div>
+  </section>
+  <!-- ESTIMATE CALCULATOR (master only) -->
+  <section>
+    <div class="sec-head"><span class="num">✦</span><h2>Plan Your Own Trip</h2><div class="rule"></div></div>
+    <div class="calc">
+      <h3>Estimate this trip for your family</h3>
+      <p class="lead">Pick your party size and tap Calculate for a ballpark cost of a similar 10-night Rockies road trip. Flights &amp; tours use our actual paid prices; lodging, vehicle, food &amp; fuel are researched mid-July ranges — each line is tagged.</p>
+      <div class="calc-controls">
+        <div class="calc-field">
+          <label>Adults</label>
+          <select id="calc-adults">
+            <option value="1">1 adult</option>
+            <option value="2" selected>2 adults</option>
+            <option value="3">3 adults</option>
+            <option value="4">4 adults</option>
+          </select>
+        </div>
+        <div class="calc-field">
+          <label>Children</label>
+          <select id="calc-kids">
+            <option value="0" selected>0 kids</option>
+            <option value="1">1 kid</option>
+            <option value="2">2 kids</option>
+            <option value="3">3 kids</option>
+            <option value="4">4 kids</option>
+          </select>
+        </div>
+        <div class="calc-field" style="display:flex;align-items:flex-end;">
+          <button id="calc-go" class="calc-btn">Calculate estimate</button>
+        </div>
+      </div>
+      <div class="calc-result" id="calc-result" style="display:none;">
+        <div class="calc-total"><span class="lbl">Estimated total (USD)</span><span id="calc-total">$0</span></div>
+        <span class="calc-conf" id="calc-conf">Estimated</span>
+        <div class="calc-break" id="calc-break"></div>
+        <div class="calc-note"><b>How to read this:</b> <span class="cb-tag known" style="margin:0 2px;">Known</span> lines use our actual 2026 paid prices. <span class="cb-tag est" style="margin:0 2px;">Est</span> lines are researched mid-July 2026 ranges — lodging is per-room (peak-July rates), so smaller parties don't drop as much as you'd expect. Booked-only basis (excludes food, fuel, contingency, park passes &amp; airfare changes).</div>
+      </div>
+    </div>
+  </section>
+
 </div>
 
 <!-- FULL-SCREEN DETAIL OVERLAY -->
@@ -451,10 +575,21 @@
 
 <footer>
   <div class="h">See you in the mountains 🏔️</div>
-  <div>Ruedas family · Canadian Rockies · July 2026</div>
+  <div>MASTER · private working copy · figures in USD</div>
 </footer>
 
 <script>
+// ---------- 60-day expiry gate (hardcoded) ----------
+(function(){
+  try{
+    const EXP=1786060800000;
+    if(Date.now()>EXP){
+      var s=document.getElementById('expired-screen');
+      if(s){ s.style.display='flex'; document.body.style.overflow='hidden'; }
+    }
+  }catch(e){}
+})();
+
 const DETAIL={"1": {"title": "Day 1 \u00b7 Tue Jul 14", "base": "Canmore", "front": "Fly in, pick up the minivan, settle into Canmore", "wear_e": "\u2708\ufe0f", "wear": "Travel-comfy + a fleece for the cool arrival", "completed": ["Flight booked (LAX\u2192YYC nonstop)", "Minivan reserved (7-seat Pacifica)", "Canmore condo booked (5 nights)"], "pending": ["Prepay checked bags before airport", "Grocery run on arrival"], "activities": []}, "2": {"title": "Day 2 \u00b7 Wed Jul 15", "base": "Canmore", "front": "Banff Gondola + Banff town day", "wear_e": "\ud83d\udea0", "wear": "T-shirt + warm layer & jacket; summit is cold/windy", "completed": [], "pending": ["Buy Banff Gondola tickets online (advance booking recommended \u2014 sells out in peak summer; ages 5 & under free)"], "activities": [{"name": "Banff Gondola", "note": "Book ahead \u2014 peak July slots fill fast", "url": "https://www.banffjaspercollection.com/attractions/banff-gondola/tickets/"}, {"name": "Bow Falls & Banff town", "note": "Free \u2014 walk-up", "url": ""}]}, "3": {"title": "Day 3 \u00b7 Thu Jul 16", "base": "Canmore", "front": "Johnston Canyon + Lake Minnewanka", "wear_e": "\ud83e\udd7e", "wear": "Hiking/closed-toe shoes, layers, rain shell \u2014 catwalks get misty", "completed": [], "pending": ["Johnston Canyon \u2014 go early for parking", "Optional: Lake Minnewanka cruise (book ahead)"], "activities": [{"name": "Johnston Canyon", "note": "Free walk-up \u00b7 bring the child carrier", "url": "https://parks.canada.ca/pn-np/ab/banff/activ/randonnee-hiking/johnston"}, {"name": "Lake Minnewanka Cruise", "note": "1-hr scenic cruise \u00b7 book ahead, nonrefundable", "url": "https://www.banffjaspercollection.com/attractions/lake-minnewanka-cruise/"}]}, "4": {"title": "Day 4 \u00b7 Fri Jul 17", "base": "Canmore", "front": "Hot springs + easy day", "wear_e": "\ud83e\ude71", "wear": "Swimsuits under clothes + sandals & towel", "completed": [], "pending": ["Banff Upper Hot Springs (walk-up)", "Pool afternoon to recharge"], "activities": [{"name": "Banff Upper Hot Springs", "note": "Walk-up \u00b7 pay at door", "url": "https://parks.canada.ca/pn-np/ab/banff/sources-banff-springs"}, {"name": "Cave & Basin NHS", "note": "Easy, kid-friendly history stop", "url": "https://parks.canada.ca/lhn-nhs/ab/caveandbasin"}]}, "5": {"title": "Day 5 \u00b7 Sat Jul 18", "base": "Canmore", "front": "Flex day \u2014 your choice", "wear_e": "\ud83d\udc55", "wear": "Easy active wear + swimsuits; quick-dry if canoeing", "completed": [], "pending": ["Decide morning-of based on energy & weather"], "activities": [{"name": "Canoe at Banff/Canmore", "note": "Optional \u00b7 seasonal rentals", "url": ""}, {"name": "Pool & playground", "note": "Built-in downtime for the little ones", "url": ""}]}, "6": {"title": "Day 6 \u00b7 Sun Jul 19", "base": "\u2192 Lake Louise", "front": "Move to Lake Louise \u00b7 Baby turns 3!", "wear_e": "\ud83d\udcf8", "wear": "Layers + a nicer top for birthday photos; lakeshore is cool", "completed": ["Lake Louise Inn condo booked (2 nights)"], "pending": ["Check in (BRING AAA CARD)", "Birthday treat in the village"], "activities": [{"name": "Lake Louise shoreline", "note": "Free \u00b7 iconic turquoise lake", "url": ""}, {"name": "Emerald Lake & Natural Bridge", "note": "Yoho NP \u00b7 short drive", "url": ""}]}, "7": {"title": "Day 7 \u00b7 Mon Jul 20", "base": "Lake Louise", "front": "Moraine Lake \u2014 the big one", "wear_e": "\ud83e\udde5", "wear": "Warmest layers + hats \u2014 early lakeside is COLD; sunscreen", "completed": ["Moraine Lake Bus tour booked (8:55a, incl. Lake Louise stop)"], "pending": ["Afternoon: pool & hot tub at the inn"], "activities": []}, "8": {"title": "Day 8 \u00b7 Tue Jul 21", "base": "\u2192 Jasper", "front": "Icefields Parkway drive to Jasper", "wear_e": "\ud83d\ude97", "wear": "Comfy car layers + warm jacket for glacier viewpoints", "completed": ["Lobstick Lodge booked (2 nights, Jasper)"], "pending": ["Start early \u2014 longest drive day", "Stops: Bow Lake, Peyto Lake, Athabasca Falls"], "activities": [{"name": "Icefields Parkway", "note": "Free \u00b7 one of the world's great drives", "url": ""}, {"name": "Skip: Glacier Skywalk", "note": "Paid \u00b7 we decided to pass", "url": ""}]}, "9": {"title": "Day 9 \u00b7 Wed Jul 22", "base": "Jasper", "front": "Maligne Lake & Spirit Island cruise", "wear_e": "\u26f5", "wear": "Layers + windbreaker for the open boat; swimsuits for Miette", "completed": ["Maligne Lake Cruise booked (12:45p)"], "pending": ["Leave town ~11:15a (dock 45\u201360 min)", "Optional: Pyramid Lake, Miette Hot Springs"], "activities": [{"name": "Miette Hot Springs", "note": "$8 adult / $7 kids \u00b7 walk-up", "url": "https://parks.canada.ca/pn-np/ab/jasper/sources-miette-springs"}, {"name": "Pyramid Lake", "note": "Free \u00b7 canoe rentals on-site", "url": ""}]}, "10": {"title": "Day 10 \u00b7 Thu Jul 23", "base": "\u2192 Calgary", "front": "Drive to Calgary, airport hotel", "wear_e": "\ud83d\udc5f", "wear": "Comfy walking shoes & sun hats; swimsuits for the pool", "completed": ["Homewood Suites airport booked (1 night)"], "pending": ["Break up the ~4-hr drive", "Optional: Calgary Zoo if energy allows"], "activities": [{"name": "Calgary Zoo", "note": "Buy online day-of \u00b7 great for kids", "url": "https://www.calgaryzoo.com/"}]}, "11": {"title": "Day 11 \u00b7 Fri Jul 24", "base": "Fly home", "front": "Relaxed morning, fly home", "wear_e": "\u2708\ufe0f", "wear": "Travel-comfy layers for the flight home", "completed": ["Return flight booked (YYC\u2192LAX 2:45p)"], "pending": ["Return minivan at YYC", "Free hot breakfast & airport shuttle"], "activities": []}};
 const CIPHER={"1":"HEAOgKIv2cuIBZcgEte1cItzFTHj/VWnSSNv+09CYkizVuFCxMJiqIJ8ZiZmHgJiSY3FIfHtx4k0Lf3lsYEnCTUPvxUxQrbEf+0eK8BPMOdcfUjUjTqoNuIJu0w7HMUV9f9bs7CY3qK9dWWBup9AiHSCmdujDx5y2PFy/BhWSjAu1kLNiw3Wla+Bb6YMw085hC8n0eEjoyTl/it8b9pvyd1jHpRRatMSJFxqA5rjtvEIFS5mK0Qsz/DOJMdWas2nlnPWN/yrCk0dRsyAD4w2FAb+WaHoH7s9vasihw2LmuaMEBmv8L3OiLOH/Us3LHIcTqIu3pGu67WjvNEBgXxcLgQ34W+ilGGtMYONChX3Xi1PFZar5OeQUy7s55RYJ3T+BD8CCESKe/5J/DYoKXOKOTEglm8tQqmy1DNz8bnhF/BUmWOh7isoYlL2nVAXN6F5zceo/ZrADNV0jc+nvrrAt3k0VXM3JLqcvn159uh3Ff1L+oRAHONCwcDu0HjGcnrgDpIGG4TDA/ahlJQqa6D/tJ9hQv6MUcTLDU0jxiJYUJ/ZdNvXtzp303AY5byhdW+cMIRtXOBzcJO6BjxcAteyT4dJtFogwlAvRWzFSERVBxA+34R+Xi8pl1A7o9v7Qq6b1td/lJWpV9pdR2O1GAEsbdiujP4uKP4EMpfNMQr/+orxq+DAJgg9WMSmaISNBGKC11fnM17lx72BkB7ziU6wl1PNxoa3aLoy/YFlYSH5qTX8GrjN3IyiMMmCiae2YY6rrx7ZyVXYdTI1JBcZuNYR31rBx/x9F5N9l+UIrxrNeo+95nCXq+WSRnDFW2ZFXaVT2vBENm4KVch/9LycZjY/jMUoVIMCP7lMvVrsr65zG6VPD1VBz4jAhFx9n3gr/7/EEmj75yredL2uuaLyulruIKFFU/SsRIhQOegBqOxkVDKyTKh/se0i/bnQHgzDsHjJtcSMJ/xeoPelGaCoTmYSuFGSE0Hc4vQMy9f5lZfluQs8VVBPtKw04W1VPjK+4PL4ryDpTc18PdE/UXtdQ5Z+1tVIDiAdOzQJqlZ6sBTogq8lDVlcr4UxgtXBnOSp7ABqlYQ0+FQV26+iopXFqQwajlylHBHCMjhi4Bq35WfVvrNHRCxbR+pNwbi72jIr0yHiw4Yorcl3WgNqxAIIJkL4j0nj+hE6UhQCt+FgWc1xuahQJ2jacbczXm5FO/dKllvBEhomkiMI3LqLDY/HsHbuWFUB1Lj5tTzuRMs5WFo2/Iwp1akxQHU7dg3crDHSSq98D0hqWJ79zPJ04WyINjqg31kwwpwNRQdUxO4NUz4=","6":"g8g59bPZMcuMjolB/7/cEmgTp5SZU9vfqn2m+urI97vA2rUwdCNVCIWZsmh6rM0m4s3UVcvPD8yHKD8grhbccC6OFgJLRxLgij3NYyGh/KXImUA8VDg1d1D60H+YB9KpdtvTsMsq5kM/3aMJ56ribb9fNU8Ir1vumleNRPO5FzJFGp2tK3YTwttSnYQT3QQwF1o/SzocKYKeZTxnZOQHxWIXvs2OW6H+qgbLzCCEzMWxbNUTVA2rVRRtrF5O/r3omVqE3kmQ0uDTrJVPz6KFfb9nD2tbEynIAgDBpGbkyA/3pgrxOCiyVXkbQRyncyXuhNkMy3wguTOQh0+b5l+rNOxqPB+hlpOOlbVp7tKca62kuUn65tnWg/txsEvgYalQzwZ5IaDn2tkzyUSNzXDwE+zaOCv00dq1qaHC4xIOeuAnQWCxNqnU3Qp5j0025wTdNCe4zcNX/8Uz1LShUuVbY4qg9tjADaclLlG51P2FnZOYA+WZWSsC7GHJRix8nZ5o/1/qhoyrdP4iYpWll8/U2Cl9/f6hIylbP9HkHsuO3uRLbFJnTP7Fc2Snnu/vy9s3t3LLqJ2ePfmxNh5yzNzJD4XZhURBcV7QD5HkJ1QJp0mLX/Y8sU9fR6cJfhGD0SLGw2Cjo3lzTfNPTmsZ","7":"FwnwfCUkAH/vfMcr9slWrJcZZr0GZVj89xSTB4300vMH0E06Cv667GgFfus1cAwjjUWxzlgRkt7EIiyqI6qsVXv5Iaw8KBiVYh/UBiwPKEHvpnUUnx5L3z3HcnyFiVxd2mkShv/fUb4URBlO+TxsqIiE+/syiiiI1xNSAt88/TLkWPGYCNY1Zq4x9yE7jrfXlCKPVWOy4jfaxNEncCY2s7/Bo9KpSWAc3Dfsp/TcKpLuI1JZFp+01FVSC2qjvR7RIJS5RGtFtnqCaJ4km4c2vncOLh+pha+kVSZ2LPbKc9/fXF0RDih4dnFQ7Qj0IbN2waM9a7cm2e7wDZKOCKsCXbGy/rLpbVCxUxTWHgIqST67z0tT48cX1e4TBmTjbIkcYH+CgSi7oRJW76kxvMCh5Pu+yMmOwQ+B/9eY2E4CGdZTJZKJX09IbRdOqOOIsaTEJe6kwcR2zXyMIm1QdeatZGF4wfk74WBO+cMv6fqtTtarzNQVdnBs3Y80yzl+ZgXzo3uHkqB/UecgdevtzBI=","8":"YeAV71qYSfE4Qajp4DUtEOW1IasYJ1O4l2e3c7ROmUTRu0Vb7LPk1Iso2KicRnJi3woRT2LambqmepbpI6LwADk1RltX1JMRJf5bZuRdZFB2JdotyPPr8Zc0CK7KnNIbQJmWYd2hYMCFGcBAjPhZZUZTiNvoSaApUwfc6EG9nFcmQnSaITnvcMJqoWU73jn0ekVkEzOIZbOczK0e0ysmvYBLdfYm5INHzY1lG7E6v8+g9bKgOpWZR2GXMqBCip+AO0q2bd0RU4HIyEsRlV+Ghp4CgCmraQGaT0Q53Ivhr/6Acw/RaopyKOn8z1/4mNVqARY4D98Ovipg2MgU77Z7GGhwOm9iTvyjfF5c3e/y0W1IbxYB+FHTU8cpAR91V2CdnhuBPwEGjNaowwn5M3ZSpK/36ol1YmvjEllMeoAgIn8UFcHvNYM6voBYa4lLP0MMQQ1QUYZJIQu8AarsXkNMNIMpY7+Br0PBB/nYIjNRsWkTUY68/4aMppPlraTJzeUyFUsI0qUYXttPMjCTl8um+QW0wzaJMGGf/inZBEWws06wzVHniVeP/VHVILC+JgYKutymzxA2Wx7bGsfjDdMFZnLkd6U5ZSIv3Bc8ScdwAdHyiTH5x/FUVIJSINti638S7JTTSaO7EBadwprqRDun2CuvpXw207Xj0y0B4hNEbUIz1xMwXzSGMR0z8sEOVbhlOrhBV25y0QGGue+NmcVnFlyRI7ovyD5LeaNYr8Vj4O0CH9sXA83S6XLBiFuUaLs2Egkpt+w6pOB5qUb4ucXUyLAxlH1Fz9eWKK0Fw8ffIOrEFxdfpw==","9":"HQamD7I9xRhuKx/lMwtFWNfJ5RiE4V4BEbSDnhzgVed/R20v2kUnVAWdB7NdcPRO36EnLTZkXcT91DWiYYxnDObwhtOgibKr042KvqSBwqWXbe9130Niz1fiznhrrQXc/RTwjKLvvklNSRVTtflIrxf5wcXz0Ae7dGer01xGwG7/Z34dl0nzh6WBrVOxBBYKo+nyRAbrORxqMc8wvLjSFhI2Oljtn6al8YjHBp2OS5VBxMPyCnsVPMLPEQUYBhAArhQo+2Btbk8pe1hCaCqeaGsvSrDBu7X+o+/Y1/MVGAjkjSPsrDVRNCuanNpmDo9zM0378O41gk18Vf2nj1hyv7aXY1T+l55fXzGOjHe25HZZMrfvacwN0szAvbgoYeYdHtrgCU+thfrsIdzMMDkO8zRvgd5csKtbIYH3afD69Jh4AdvP/hA9M610flSmGkggpr8rbIRoj/XQrq0XRT+s15sVG2LvoXXYBwhzp8xzmbPXqWQ6zJMhX1c9yQ==","10":"OBXJl7HtBCtXELmkGRevdNAU24TwKY07n8zollsk4M0D5YGgZfCubT0dkasmefiEfvvP2viFLz7TQgIm/M7VD+am5JntjLbk7ikNor/qOuOLPje6a+e3+d7L9SpDHjhy2JviSIM0wicXbhBimn1aZXhPPc17qFze9ODb+tRuQZ6aIToLr/f4jtdqFMNzpJQw/dX0Aog6/ONPVY0VnI6ExPz6P0qHb9MtKwYlrOiB6tEOFwX6yZGFVzdb0COa4anCkM48WMvoZ+C+jgzRhW9f6n7w4PSfz1D9+VRUDBP/WGKqoMgZyNjilAJL1YD26lD0q98TXOSJBFRjwpsHy9Sc2J5S0vogbC16uojYjV/s4ISY/hY3eFuqQ66XUxXomJnKR2QrtnOpcAX/tzc6Jm0L3OZHgUFlQ2LizNNIEbzlzUWogdJXJS5HgrCs5oYIVCgiXnNjMpvmrfxzHAbPV2fhGu1DsmZCQPCSwjjwftlxX4oTkt3UWxKnK1mnTZpCok5rDFrM954h+jOXsEEgR9VxJ7H3Nn8MyGtCZBZK6pf1YasFC26BqzRdL+dKTyy0Dp+f4qgU7xY8","11":"VVZ9ZciyE7+YBMyNMIZh48KQetmPP8QTGHCfC9yinPRKc1gQdcJqeiJq6IqxAIAprTq4Bux7xdu7YRCqKmrhNN7UYFU5N2qflsu/FNyxheyyp14hflmQN48P92Pgi63hYQhChUCErFVBswUeqggb+sHkke1LXzXWXdzfUUSrUQtFQg5/zfBf1W0N+9Gq+ny4upCVChg51abSdLfP+HIkiwQ+101XyUoYJgCwoI/D1QxvY9NiMdCuYV4JocbbgNZL1kVs5M2A0gWXKCQ0FgwkBvWnMW0GRXoWEjfca4eRG6nWZu1bIATQgTCFtn9N85faBokhpQFpTgmuGs0En6SI4Q6JNePPL7ogmNj5XwPCil8igmvFE4RWgsOHgwK0Ienmh9OiI1xs1OnVQbof6wj5nQV8VEDHPEfTfkSba3M="};
 
@@ -602,6 +737,65 @@ function closeOverlay(){overlay.classList.remove('show');document.body.style.ove
 document.querySelectorAll('.daycard').forEach(c=>c.addEventListener('click',()=>openOverlay(c.dataset.day)));
 overlay.addEventListener('click',e=>{if(e.target===overlay)closeOverlay();});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&overlay.classList.contains('show'))closeOverlay();});
+// ---------- estimate calculator (master only, anchored to real costs) ----------
+(function(){
+  const go=document.getElementById('calc-go'); if(!go) return;
+  const aSel=document.getElementById('calc-adults'), kSel=document.getElementById('calc-kids'),
+        result=document.getElementById('calc-result');
+  // KNOWN per-person (from actual 2026 bookings)
+  const FLIGHT_PP=588, TOUR_PP=134;
+  // Anchored placeholders
+  const ROOM_NIGHT=337, NIGHTS=10;             // per-room/night, peak-July (your real blended rate)
+  function vehicleDay(party){ if(party<=2) return 70; if(party<=4) return 110; return 187; }
+  function money(n){ return '$'+Math.round(n).toLocaleString(); }
+  function hideResult(){ result.style.display='none'; }
+  function calc(){
+    const a=+aSel.value, k=+kSel.value, party=a+k;
+    const flights=FLIGHT_PP*party;
+    const rooms=Math.ceil(party/4);
+    const lodging=rooms*ROOM_NIGHT*NIGHTS;
+    const vehicle=vehicleDay(party)*NIGHTS;
+    const tours=TOUR_PP*party;
+    const total=flights+lodging+vehicle+tours;
+    const rows=[
+      ['Flights (round-trip)',flights,'known'],
+      ['Lodging · '+rooms+' room'+(rooms>1?'s':'')+' × '+NIGHTS+' nts',lodging,'est'],
+      ['Rental vehicle × '+NIGHTS+' days',vehicle,'est'],
+      ['Tours (Moraine + Maligne)',tours,'known'],
+    ];
+    document.getElementById('calc-total').textContent=money(total);
+    document.getElementById('calc-break').innerHTML=rows.map(r=>
+      `<div class="cb-row"><span class="nm">${r[0]} <span class="cb-tag ${r[2]}">${r[2]==='known'?'Known':'Est'}</span></span><span class="v">${money(r[1])}</span></div>`
+    ).join('');
+    const knownShare=(flights+tours)/total;
+    const conf=Math.round(60+knownShare*35);
+    document.getElementById('calc-conf').textContent='Estimated · ~'+conf+'% confidence · booked-only basis';
+    result.style.display='block';
+  }
+  go.addEventListener('click',calc);
+  // reset (hide) whenever inputs change, so a stale number never lingers
+  aSel.addEventListener('change',hideResult);
+  kSel.addEventListener('change',hideResult);
+})();
+
+
+
+// ---------- pricing unlock (second password: Ruedas123$) ----------
+const PRICE_CIPHER="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";
+(function(){
+  const btn=document.getElementById('priceunlock'); if(!btn) return;
+  const inp=document.getElementById('pricepass'), err=document.getElementById('priceerr'),
+        reveal=document.getElementById('pricereveal'), box=document.getElementById('pricebox');
+  async function unlock(){
+    const pass=inp.value; if(!pass) return;
+    try{
+      const html=await decryptData(PRICE_CIPHER,pass);
+      reveal.innerHTML=html; box.style.display='none'; reveal.style.display='block'; err.style.display='none';
+    }catch(e){ err.style.display='block'; }
+  }
+  btn.addEventListener('click',unlock);
+  inp.addEventListener('keydown',e=>{if(e.key==='Enter')unlock();});
+})();
 
 </script>
 </body>
